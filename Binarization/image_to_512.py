@@ -15,8 +15,8 @@ def main(argv=None):
     scale_list = [0.75, 1.00, 1.25, 1.50]
     rotation = [0, 3]
 
-    image_save_dir = '/home/ju/data/Resize_256/Trainset/image/'
-    mask_save_dir = '/home/ju/data/Resize_256/Trainset/mask/'
+    image_save_dir = './Resize_256/Trainset/image/'
+    mask_save_dir = './Resize_256/Trainset/mask/'
 
     os.makedirs(image_save_dir, exist_ok=True)
     os.makedirs(mask_save_dir, exist_ok=True)
