@@ -1,0 +1,9 @@
+scipy
+opencv-python
+matplotlib
+segmentation-models-pytorch
+pytesseract
+numpy==1.22.4
+pywavelets
+scikit-image
+scikit-learn
