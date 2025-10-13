@@ -98,5 +98,4 @@ for method_name in results.keys():
         all_DRD = np.concatenate([results[method_name][d]['DRD'] for d in datasets])
         writer.writerow(['average', np.mean(all_F), np.mean(all_PF), np.mean(all_PSNR), np.mean(all_DRD)])
 
-
 print("Processing done! CSV and k-means + binary images saved in:", save_root_dir)
