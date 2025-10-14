@@ -11,5 +11,5 @@
 ```
 * Example Test (YOLOv8m):
 ```
-  yolo val model=./runs/detect/train_YOLOv8m/weights/best.pt data=./meta.yaml split=test imgsz=640 batch=16 conf=0.25 iou=0.6 device=0,1 workers=8 name=test_yolov8m save_csv=True
+  yolo val model=./runs/detect/train_YOLOv8m/weights/best.pt data=./meta.yaml split=test imgsz=640 batch=16 conf=0.25 iou=0.6 device=0,1 workers=8 name=test_yolov8m save=True
 ```
