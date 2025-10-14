@@ -7,7 +7,7 @@
 ## Seal Detection
 * Example Train & Val (YOLOv8m):
 ```
-  yolo detect train model=yolov8m.pt data=./meta.yaml epochs=100 batch=16 imgsz=640 device=0,1 workers=8 optimizer=SGD lr0=0.01
+  yolo detect train model=yolov8m.pt data=./meta.yaml epochs=100 batch=16 imgsz=640 device=0,1 workers=8 optimizer=SGD lr0=0.01 name=train_yolov8m
 ```
 * Example Test (YOLOv8m):
 ```
