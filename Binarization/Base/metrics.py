@@ -89,22 +89,18 @@ def get_metric(pred_img, gt_mask):
     recall = numtp / float(numtp + numfn)
     fmeasure = 100. * (2. * recall * precision) / (recall + precision) # percent
 
-    # get skeletonized im_gt
     sk = bwmorph(1 - gt_mask)
     im_sk = np.ones(gt_mask.shape, np.uint8)
     im_sk[sk] = 0
 
-    # skel true positive
     ptp = np.zeros(gt_mask.shape, np.uint8)
     ptp[(pred_img==0) & (im_sk==0)] = 1
     numptp = ptp.sum()
 
-    # skel false negative
     pfn = np.zeros(gt_mask.shape, np.uint8)
     pfn[(pred_img==1) & (im_sk==0)] = 1
     numpfn = pfn.sum()
 
-    # get pseudo-FMeasure
     precall = numptp / float(numptp + numpfn)
     pfmeasure = 100 * (2 * precall * precision) / (precall + precision) # percent
 
