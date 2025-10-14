@@ -1,9 +1,9 @@
 # Kuzushiji Seal Dataset (KuSeD)
 
 ## Seal Detection
-* Example Train & Val (YOLOv8m):
+* Example Train & Val (YOLOv8l):
 ```
-yolo detect train model=yolov8m.pt data=./meta.yaml epochs=100 batch=16 imgsz=640 device=0,1 workers=8 optimizer=SGD lr0=0.01 accumulate=4
+yolo detect train model=yolov8l.pt data=./meta.yaml epochs=100 batch=64 imgsz=640 device=0,1 workers=8 optimizer=SGD lr0=0.01
 ```
 * Example Test (YOLOv8m):
 ```
