@@ -1,4 +1,8 @@
 # Kuzushiji Seal Dataset (KuSeD)
+## Environment
+```
+  pip install -r requirements.txt
+```
 
 ## Seal Detection
 * Example Train & Val (YOLOv8m):
