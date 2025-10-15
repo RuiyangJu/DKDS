@@ -1,4 +1,4 @@
-# Kuzushiji Seal Dataset (KuSeD)
+# Degraded Kuzushiji Documents with Seals (DKDS) Dataset
 ## Environment
 ```
   pip install -r requirements.txt
