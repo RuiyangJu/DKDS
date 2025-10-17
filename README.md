@@ -6,6 +6,15 @@
 </p>
 
 ## Tracks & Challenge
+### Track 1: Seal Detection
+Seals may overlap with Kuzushiji characters (or other seals) and appear with faint ink, adversely affecting detection accuracy. 
+<p align="center">
+  <img src="img/fig_teaser.png" width="1024" title="details">
+</p>
+
+<p align="center">
+  <img src="img/fig_teaser.png" width="1024" title="details">
+</p>
 
 ## Citation
 If you find our paper useful in your research, please consider citing:
