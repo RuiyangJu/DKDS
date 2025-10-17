@@ -10,13 +10,13 @@
 ### Track 1: Seal Detection
 Seals may overlap with Kuzushiji characters (or other seals) and appear with faint ink, adversely affecting detection accuracy. 
 <p align="center">
-  <img src="img/fig_track1.png" width="1024" title="details">
+  <img src="img/fig_track1.png" width="640" title="details">
 </p>
 
 ### Track 2: Document Binarization
 When seals overlap with Kuzushiji characters, removing the seals while preserving (or even restoring) the underlying characters poses a significant challenge.
 <p align="center">
-  <img src="img/fig_track2.png" width="1024" title="details">
+  <img src="img/fig_track2.png" width="640" title="details">
 </p>
 
 ## Citation
