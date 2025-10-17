@@ -2,7 +2,7 @@
 >[DKDS: A Benchmark Dataset of Degraded Kuzushiji Documents with Seals]()
 
 <p align="center">
-  <img src="" width="1024" title="details">
+  <img src="img/fig_teaser.png" width="1024" title="details">
 </p>
 
 ## Environment
