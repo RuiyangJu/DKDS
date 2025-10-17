@@ -29,7 +29,7 @@ If you find our paper useful in your research, please consider citing:
 | YOLO11l    | 25.31M   | 87.3G    | 99.5%                          | 95.5%                             | 98.7%                          | 88.7%                              |
 
 ### Train & Val & Test
-* Example (YOLOv8m):
+* We conducted training, validation, and testing of YOLO models using the [Ultralytics](https://github.com/ultralytics/ultralytics) YOLO framework. For instance, the YOLOv8m model was trained and evaluated using the following instructions:
 ```
   yolo detect train model=yolov8m.pt data=./meta.yaml epochs=100 batch=16 imgsz=640 device=0,1 workers=8 optimizer=SGD lr0=0.01 name=train_yolov8m
   yolo val model=./runs/detect/train_yolov8m/weights/best.pt data=./meta.yaml split=test imgsz=640 batch=16 conf=0.25 iou=0.6 device=0,1 workers=8 name=test_yolov8m
