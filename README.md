@@ -5,6 +5,8 @@
   <img src="img/fig_teaser.png" width="1024" title="details">
 </p>
 
+## Tracks & Challenge
+
 ## Citation
 If you find our paper useful in your research, please consider citing:
 ```
