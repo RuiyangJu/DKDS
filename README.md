@@ -1,4 +1,7 @@
 # Degraded Kuzushiji Documents with Seals (DKDS)
+>[DKDS: A Benchmark Dataset of Degraded Kuzushiji Documents with Seals]()
+
+
 ## Environment
 ```
   pip install -r requirements.txt
