@@ -16,11 +16,21 @@ If you find our paper useful in your research, please consider citing:
 ```
 
 ## Seal Detection
-* Example Train & Val (YOLOv8m):
+### Baseline
+| Model       | Param.   | FLOPs    | AP<sub>50</sub><sup>val</sup> | AP<sub>50-95</sub><sup>val</sup> | AP<sub>50</sub><sup>test</sup> | AP<sub>50-95</sub><sup>test</sup> |
+| :--:       | :-:      | :-:      | :-:                            | :-:                               | :-:                            | :-:                                |
+| YOLOv8m    | 25.86M   | 79.1G    | 99.5%                          | 92.4%                             | 97.9%                          | 87.9%                              |
+| YOLOv9m    | 20.16M   | 77.5G    | 99.5%                          | 91.5%                             | 98.5%                          | 89.9%                              |
+| YOLOv10m   | 16.49M   | 64.0G    | 99.5%                          | 91.8%                             | 97.0%                          | 89.0%                              |
+| YOLO11m    | 20.05M   | 68.2G    | 99.5%                          | 96.4%                             | 98.7%                          | 89.6%                              |
+| YOLOv8l    | 43.63M   | 165.4G   | 99.5%                          | 94.4%                             | 98.7%                          | 91.1%                              |
+| YOLOv9c    | 25.53M   | 103.7G   | 99.5%                          | 93.9%                             | 98.0%                          | 89.2%                              |
+| YOLOv10l   | 25.77M   | 127.2G   | 99.5%                          | 93.7%                             | 96.5%                          | 88.5%                              |
+| YOLO11l    | 25.31M   | 87.3G    | 99.5%                          | 95.5%                             | 98.7%                          | 88.7%                              |
+
+### Train & Val & Test
+* Example (YOLOv8m):
 ```
   yolo detect train model=yolov8m.pt data=./meta.yaml epochs=100 batch=16 imgsz=640 device=0,1 workers=8 optimizer=SGD lr0=0.01 name=train_yolov8m
-```
-* Example Test (YOLOv8m):
-```
   yolo val model=./runs/detect/train_yolov8m/weights/best.pt data=./meta.yaml split=test imgsz=640 batch=16 conf=0.25 iou=0.6 device=0,1 workers=8 name=test_yolov8m
 ```
