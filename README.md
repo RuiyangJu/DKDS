@@ -30,7 +30,7 @@ If you find our paper useful in your research, please consider citing:
 ```
 
 ## Seal Detection
-### Baseline
+### Baseline Performance
 | Model       | Param.   | FLOPs    | AP<sub>50</sub><sup>val</sup> | AP<sub>50-95</sub><sup>val</sup> | AP<sub>50</sub><sup>test</sup> | AP<sub>50-95</sub><sup>test</sup> |
 | :--:       | :-:      | :-:      | :-:                            | :-:                               | :-:                            | :-:                                |
 | YOLOv8m    | 25.86M   | 79.1G    | 99.5%                          | 92.4%                             | 97.9%                          | 87.9%                              |
@@ -54,4 +54,10 @@ For instance, the YOLOv8m model was trained and evaluated using the following in
 ```
 
 ## Document Binarization
-### Baseline
+### Baseline Performance
+
+
+### Pretrained Models
+You can download our pretrained models [here]().
+
+### Train & Evaluate
