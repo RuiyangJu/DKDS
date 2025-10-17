@@ -43,7 +43,7 @@ If you find our paper useful in your research, please consider citing:
 | YOLO11l    | 25.31M   | 87.3G    | 99.5%                          | 95.5%                             | 98.7%                          | 88.7%                              |
 
 ### Pretrained Models
-[Download](https://1drv.ms/f/c/56c255dd1bb9ae9e/Er-w8GewvF1OhD1NK-3zqD4BhF15-o4Bc9txTcz-IetBBA?e=RkJFgK)
+You can download our pretrained models [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/Er-w8GewvF1OhD1NK-3zqD4BhF15-o4Bc9txTcz-IetBBA?e=RkJFgK).
 
 ### Train & Val & Test
 We conducted training, validation, and testing of YOLO models using the [Ultralytics](https://github.com/ultralytics/ultralytics) YOLO framework.
