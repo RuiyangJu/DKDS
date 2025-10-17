@@ -3,7 +3,7 @@
 
 ## Teaser
 <p align="center">
-  <img src="img/fig_teaser.png" width="1024" title="details">
+  <img src="img/fig_teaser.png" width="640" title="details">
 </p>
 
 ## Tracks & Challenge
