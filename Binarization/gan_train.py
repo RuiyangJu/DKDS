@@ -9,16 +9,18 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 import torch.autograd as autograd
-from torch.utils.data import DataLoader, Dataset
-
+from torch.utils.data import DataLoader
+torch.cuda.current_device()
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
 import segmentation_models_pytorch as smp
 from segmentation_models_pytorch.encoders import get_preprocessing_fn
+from torch.utils.data import Dataset
 from Base.model import Discriminator
 from Base.tool_clean import get_image_patch, check_is_image
 
 class Dataset_Return_One(Dataset):
+
     def __init__(self, image_dir, mask_dir, base_model_name, encoder_weights):
         self.base_model_name = base_model_name
         self.preprocess_input = get_preprocessing_fn(base_model_name, pretrained=encoder_weights)
@@ -31,6 +33,7 @@ class Dataset_Return_One(Dataset):
             if not check_is_image(image_path):
                 print('not image', image_path)
                 continue
+
             if not os.path.isfile(os.path.join(mask_dir, image_path)):
                 print('no mask', image_path)
                 continue
@@ -50,8 +53,9 @@ class Dataset_Return_One(Dataset):
         image = torch.from_numpy(image).permute(2, 0, 1).float()
 
         mask = torch.from_numpy(mask).permute(2, 0, 1).float() / 255.
-        return image, mask
 
+        return image, mask
+    
 def sample_images(epoch, idx, test_images, test_masks, test_masks_pred, image_save_path):
     r, c = 3, 3
     gen_imgs = []
@@ -68,6 +72,7 @@ def sample_images(epoch, idx, test_images, test_masks, test_masks_pred, image_sa
                 axs[i, j].imshow(gen_imgs[cnt])
             else:
                 axs[i, j].imshow(gen_imgs[cnt], cmap='gray', vmin=0, vmax=1.0)
+
             axs[i, j].set_title(titles[i])
             axs[i, j].axis('off')
             cnt += 1
@@ -85,54 +90,54 @@ def compute_gradient_penalty(D, real_samples, fake_samples, device):
         create_graph=True,
         retain_graph=True,
         only_inputs=True,
-    )[0]
+    )[0] 
     gradients = gradients.view(gradients.size(0), -1) + 1e-16
     gradient_penalty = ((gradients.norm(2, dim=1) - 1) ** 2).mean()
     return gradient_penalty
 
 def unet_train(epochs, gpu, base_model_name, encoder_weights, generator_lr, discriminator_lr, lambda_bce,
                 batch_size, image_train_dir, mask_train_dir, image_test_dir, mask_test_dir):
-
     weight_path = './weights/GAN_' + base_model_name + '_' + str(int(lambda_bce)) + '_' + str(generator_lr)
     image_save_path = weight_path + '/images'
     os.makedirs(weight_path, exist_ok=True)
     os.makedirs(image_save_path, exist_ok=True)
 
-    imagenet_mean = np.array([0.485, 0.456, 0.406])
-    imagenet_std = np.array([0.229, 0.224, 0.225])
+    imagenet_mean = np.array( [0.485, 0.456, 0.406] )
+    imagenet_std = np.array( [0.229, 0.224, 0.225] )
 
-    patch_train_dataset = Dataset_Return_One(image_train_dir, mask_train_dir, base_model_name, encoder_weights)
-    patch_train_loader = DataLoader(patch_train_dataset, batch_size=batch_size, num_workers=4, shuffle=True)
-    print('patch train len: %d' % len(patch_train_loader))
+    patch_train_data_set = Dataset_Return_One(image_train_dir, mask_train_dir, 
+                                                base_model_name, encoder_weights)
+
+    patch_train_loader = DataLoader(patch_train_data_set, batch_size=batch_size, num_workers=4, shuffle=True)
+    print('patch train len: %d' % (len(patch_train_loader)))
 
     device = torch.device("cuda:%s" % gpu)
 
     patch_model = smp.Unet(base_model_name, encoder_weights=encoder_weights, in_channels=3)
-    discriminator = Discriminator(in_channels=4)
-
-    if torch.cuda.device_count() > 1:
-        print("Using", torch.cuda.device_count(), "GPUs")
-        patch_model = nn.DataParallel(patch_model)
-        discriminator = nn.DataParallel(discriminator)
-
     patch_model.to(device)
-    discriminator.to(device)
-
     optimizer_patch_generator = optim.Adam(patch_model.parameters(), lr=generator_lr, betas=(0.5, 0.999))
+
+    discriminator = Discriminator(in_channels=4)
+    discriminator.to(device)
     optimizer_discriminator = optim.Adam(discriminator.parameters(), lr=discriminator_lr, betas=(0.5, 0.999))
+
     criterion = nn.BCEWithLogitsLoss()
 
     image_test_list = os.listdir(image_test_dir)
     preprocess_input = get_preprocessing_fn(base_model_name, pretrained=encoder_weights)
+
     lambda_gp = 10.0
     threshold_value = int(256 * 0.5)
+
     patch_best_fmeasure = 0.0
     epoch_start_time = time.time()
-
     for epoch in range(epochs):
+
         patch_model.train()
         for idx, (images, masks) in enumerate(patch_train_loader):
-            images, masks = images.to(device), masks.to(device)
+            images = images.to(device)
+            masks = masks.to(device)
+
             masks_pred = patch_model(images)
 
             discriminator.requires_grad_(True)
@@ -151,18 +156,20 @@ def unet_train(epochs, gpu, base_model_name, encoder_weights, generator_lr, disc
 
             if idx % 5 == 0:
                 discriminator.requires_grad_(False)
+
                 fake_AB = torch.cat((images, masks_pred), 1)
                 pred_fake = discriminator(fake_AB)
                 generator_loss = -torch.mean(pred_fake)
                 bce_loss = criterion(masks_pred, masks)
                 total_loss = generator_loss + bce_loss * lambda_bce
-
+                
                 optimizer_patch_generator.zero_grad()
                 total_loss.backward()
                 optimizer_patch_generator.step()
 
             if idx % 2000 == 0:
-                print(f"train step[{idx}/{len(patch_train_loader)}] discriminator loss: {discriminator_loss.item():.5f}, total loss: {total_loss.item():.5f}, generator loss: {generator_loss.item():.5f}, bce loss: {bce_loss.item():.5f}, time: {time.time() - epoch_start_time:.2f}")
+                print('train step[%d/%d] patch discriminator loss: %.5f, total loss: %.5f, generator loss: %.5f, bce loss: %.5f, time: %.2f' % 
+                            (idx, len(patch_train_loader), discriminator_loss.item(), total_loss.item(), generator_loss.item(), bce_loss.item(), time.time() - epoch_start_time))
 
                 rand_idx_start = randrange(masks.size(0) - 3)
                 rand_idx_end = rand_idx_start + 3
@@ -175,16 +182,15 @@ def unet_train(epochs, gpu, base_model_name, encoder_weights, generator_lr, disc
 
                 test_images = images[rand_idx_start:rand_idx_end].permute(0, 2, 3, 1).cpu().numpy()
                 test_images = test_images * imagenet_std + imagenet_mean
-                test_images = np.clip(test_images, 0.0, 1.0)
+                test_images = np.maximum(test_images, 0.0)
+                test_images = np.minimum(test_images, 1.0)
                 sample_images(epoch, idx, test_images, test_masks, test_masks_pred, image_save_path)
 
         patch_model.eval()
+        print('eval patch')
         total_fmeasure = 0.0
         total_image_number = 0
-
         for eval_idx, image_test in enumerate(image_test_list):
-            if not check_is_image(image_test):
-                continue
             image = cv2.imread(os.path.join(image_test_dir, image_test))
             h, w, _ = image.shape
             image_name = image_test.split('.')[0]
@@ -196,27 +202,37 @@ def unet_train(epochs, gpu, base_model_name, encoder_weights, generator_lr, disc
             elif os.path.isfile(gt_path_bmp):
                 gt_mask = cv2.imread(gt_path_bmp, cv2.IMREAD_GRAYSCALE)
             else:
+                print('eval, no mask', image_test)
                 continue
+
             gt_mask = np.expand_dims(gt_mask, axis=-1)
 
             image_patches, poslist = get_image_patch(image, 256, 256, overlap=0.1, is_mask=False)
-            color_patches = [preprocess_input(patch.astype(np.float32), input_space="BGR") for patch in image_patches]
+            color_patches = []
+            for patch in image_patches:
+                color_patches.append(preprocess_input(patch.astype(np.float32), input_space="BGR"))
 
-            preds = []
             step = 0
+            preds = []
             with torch.no_grad():
                 while step < len(image_patches):
-                    ps, pe = step, step + batch_size
-                    pe = min(pe, len(image_patches))
+                    ps = step
+                    pe = step + batch_size
+                    if pe >= len(image_patches):
+                        pe = len(image_patches)
+
                     images_global = torch.from_numpy(np.array(color_patches[ps:pe])).permute(0, 3, 1, 2).float().to(device)
-                    preds.extend(torch.sigmoid(patch_model(images_global)).cpu())
+                    preds.extend( torch.sigmoid(patch_model(images_global)).cpu() )
                     step += batch_size
 
             out_img = np.ones((h, w, 1)) * 255
-            for i, patch in enumerate(preds):
-                patch = patch.permute(1, 2, 0).numpy() * 255
+            for i in range(len(image_patches)):
+                patch = preds[i].permute(1, 2, 0).numpy() * 255
+
                 start_h, start_w, end_h, end_w, h_shift, w_shift = poslist[i]
-                h_cut, w_cut = end_h - start_h, end_w - start_w
+                h_cut = end_h - start_h
+                w_cut = end_w - start_w
+
                 tmp = np.minimum(out_img[start_h:end_h, start_w:end_w], patch[h_shift:h_shift+h_cut, w_shift:w_shift+w_cut])
                 out_img[start_h:end_h, start_w:end_w] = tmp
 
@@ -227,32 +243,41 @@ def unet_train(epochs, gpu, base_model_name, encoder_weights, generator_lr, disc
             gt_mask[gt_mask > 0] = 1
             out_img[out_img > 0] = 1
 
-            tp = ((out_img == 0) & (gt_mask == 0)).astype(np.uint8)
-            fp = ((out_img == 0) & (gt_mask == 1)).astype(np.uint8)
-            fn = ((out_img == 1) & (gt_mask == 0)).astype(np.uint8)
-            numtp, numfp, numfn = tp.sum(), fp.sum(), fn.sum()
-            precision = numtp / float(numtp + numfp)
-            recall = numtp / float(numtp + numfn)
+            tp = np.zeros(gt_mask.shape, np.uint8)
+            tp[(out_img==0) & (gt_mask==0)] = 1
+            numtp = tp.sum()
+
+            fp = np.zeros(gt_mask.shape, np.uint8)
+            fp[(out_img==0) & (gt_mask==1)] = 1
+            numfp = fp.sum()
+
+            fn = np.zeros(gt_mask.shape, np.uint8)
+            fn[(out_img==1) & (gt_mask==0)] = 1
+            numfn = fn.sum()
+
+            precision = (numtp) / float(numtp + numfp)
+            recall = (numtp) / float(numtp + numfn)
             fmeasure = 100. * (2. * recall * precision) / (recall + precision)
+
             total_fmeasure += fmeasure
             total_image_number += 1
 
         total_fmeasure /= total_image_number
-        patch_best_fmeasure = max(patch_best_fmeasure, total_fmeasure)
 
-        print(f"epoch[{epoch+1}/{epochs}] patch fmeasure: {total_fmeasure:.4f}, best_fmeasure: {patch_best_fmeasure:.4f}, time: {time.time()-epoch_start_time:.2f}\n")
+        if patch_best_fmeasure < total_fmeasure:
+            patch_best_fmeasure = total_fmeasure
+        print('epoch[%d/%d] patch fmeasure: %.4f, best_fmeasure: %.4f, time: %.2f' 
+                    % (epoch + 1, epochs, total_fmeasure, patch_best_fmeasure, time.time() - epoch_start_time))
+        print()
 
-        torch.save(
-            patch_model.module.state_dict() if isinstance(patch_model, nn.DataParallel) else patch_model.state_dict(),
-            weight_path + '/unet_patch_%d_%.4f.pth' % (epoch + 1, total_fmeasure)
-        )
-        torch.save(
-            discriminator.module.state_dict() if isinstance(discriminator, nn.DataParallel) else discriminator.state_dict(),
-            weight_path + '/dis_%d_%.4f.pth' % (epoch + 1, total_fmeasure)
-        )
+    torch.save(patch_model.state_dict(), weight_path + '/unet_patch_%d_%.4f.pth' % (epoch + 1, total_fmeasure))
+    torch.save(discriminator.state_dict(), weight_path + '/dis_%d_%.4f.pth' % (epoch + 1, total_fmeasure))
 
 
 if __name__ == "__main__":
+    base_model_list = ['efficientnet-b0', 'efficientnet-b1', 'efficientnet-b2', 'efficientnet-b3'
+                'efficientnet-b4', 'efficientnet-b5', 'efficientnet-b6', 'efficientnet-b7']
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--gpu", type=str, default='0', help="GPU number")
     parser.add_argument("--epochs", type=int, default=10, help="epochs")
@@ -261,14 +286,11 @@ if __name__ == "__main__":
     parser.add_argument('--encoder_weights', type=str, default='imagenet', help='encoder_weights')
     parser.add_argument('--generator_lr', type=float, default=2e-4, help='generator learning rate')
     parser.add_argument('--discriminator_lr', type=float, default=2e-4, help='discriminator learning rate')
-    parser.add_argument('--batch_size', type=int, default=8, help='batch size')
+    parser.add_argument('--batch_size', type=int, default=16, help='batch size')
     parser.add_argument('--image_train_dir', type=str, default='./Resize_512/Trainset/image/')
     parser.add_argument('--mask_train_dir', type=str, default='./Resize_512/Trainset/mask/')
     parser.add_argument('--image_test_dir', type=str, default='./Testset/image/')
     parser.add_argument('--mask_test_dir', type=str, default='./Testset/mask/')
     opt = parser.parse_args()
-
-    unet_train(opt.epochs, opt.gpu, opt.base_model_name, opt.encoder_weights,
-               opt.generator_lr, opt.discriminator_lr, opt.lambda_bce,
-               opt.batch_size, opt.image_train_dir, opt.mask_train_dir,
-               opt.image_test_dir, opt.mask_test_dir)
+    unet_train(opt.epochs, opt.gpu, opt.base_model_name, opt.encoder_weights, opt.generator_lr, opt.discriminator_lr, opt.lambda_bce,
+                opt.batch_size, opt.image_train_dir, opt.mask_train_dir, opt.image_test_dir, opt.mask_test_dir)
