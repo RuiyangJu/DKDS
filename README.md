@@ -65,14 +65,15 @@ For instance, the YOLOv8m model was trained and evaluated using the following in
 You can download our pretrained models [here]().
 
 ### Train & Evaluate
-For traditional algorithms, please follow the instructions below:
+For traditional algorithms, please follow the instruction below:
 ```
   python traditional.py
 ```
-For k-means + traditional algorithms, please follow the instructions below:
+For k-means + traditional algorithms, please follow the instruction below:
 ```
   python kmeans.py
 ```
+For train and test the GAN model, please follow the instructions below:
 ```
   python image_to_512.py
   python gan_train.py
