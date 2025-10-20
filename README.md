@@ -17,6 +17,8 @@ You can download our dataset for Track 1: Seal Detection from [here](https://1dr
 
 ### Track 2: Document Binarization
 When seals overlap with Kuzushiji characters, removing the seals while preserving (or even restoring) the underlying characters poses a significant challenge.
+
+You can download our dataset for Track 2: Document Binarization from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/Ekg5I9tnsJJNoVQJWfUO4aQBZ0AdgZ1wUbDBw3z_8FW5nw?e=qsezUG).
 <p align="left">
   <img src="img/fig_track2.png" width="640" title="details">
 </p>
