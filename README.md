@@ -63,6 +63,7 @@ For instance, the YOLOv8m model was trained and evaluated using the following in
 
 ### Pretrained Models
 You can download our pretrained models [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/EvyWW4yx5e5OiqstmHWFXYMBe9z3Z3RwSB4bAMwcgkw_bg?e=3lGaP9).
+Please put ``GAN_efficientnet-b5_50_0.00002`` in the ``weights`` fold before run ``gan_test.py``.
 
 ### Train & Evaluate
 For traditional algorithms, please follow the instruction below:
