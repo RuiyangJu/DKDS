@@ -75,4 +75,6 @@ For k-means + traditional algorithms, please follow the instructions below:
 ```
 ```
   python image_to_512.py
+  python gan_train.py
+  python gan_test.py
 ```
