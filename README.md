@@ -59,7 +59,7 @@ For instance, the YOLOv8m model was trained and evaluated using the following in
 
 ## Document Binarization
 ### Baseline Performance
-| Model | FM<sup>↑</sup> | p-FM<sup>↑</sup> | PSNR<sup>↑</sup> | DRD<sup>↓</sup> | Avg-Score<sup>↑</sup> |
+| Model | FM | p-FM | PSNR | DRD | Avg-Score |
 | :--: | :-: | :-: | :-: | :-: | :-: |
 | Niblack | 39.13 | 41.14 | 8.44 | 79.70 | 27.25 |
 | Otsu | 63.01 | 63.31 | 11.76 | 37.69 | 50.10 |
