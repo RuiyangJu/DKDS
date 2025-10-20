@@ -59,7 +59,15 @@ For instance, the YOLOv8m model was trained and evaluated using the following in
 
 ## Document Binarization
 ### Baseline Performance
-
+| Model | FM<sup>↑</sup> | p-FM<sup>↑</sup> | PSNR<sup>↑</sup> | DRD<sup>↓</sup> | Avg-Score<sup>↑</sup> |
+| :--: | :-: | :-: | :-: | :-: | :-: |
+| Niblack | 39.13 | 41.14 | 8.44 | 79.70 | 27.25 |
+| Otsu | 63.01 | 63.31 | 11.76 | 37.69 | 50.10 |
+| Sauvola | 87.87 | 90.99 | 18.34 | 7.01 | 72.55 |
+| K-means + Niblack | 39.99 | 42.03 | 8.61 | 76.67 | 28.49 |
+| K-means + Otsu | 84.76 | 86.28 | 17.14 | 9.90 | 69.57 |
+| K-means + Sauvola | 88.59 | 91.48 | 18.65 | 6.37 | 73.09 |
+| GAN | 98.11 | 98.14 | 26.53 | 0.82 | 80.49 |
 
 ### Pretrained Models
 You can download our pretrained models [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/EvyWW4yx5e5OiqstmHWFXYMBe9z3Z3RwSB4bAMwcgkw_bg?e=3lGaP9).
