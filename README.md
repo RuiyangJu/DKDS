@@ -65,9 +65,13 @@ For instance, the YOLOv8m model was trained and evaluated using the following in
 You can download our pretrained models [here]().
 
 ### Train & Evaluate
-For Traditional Algorithms, use the following instraction:
+For traditional algorithms, please follow the instructions below:
 ```
   python traditional.py
+```
+For k-means + traditional algorithms, please follow the instructions below:
+```
+  python kmeans.py
 ```
 ```
   python image_to_512.py
