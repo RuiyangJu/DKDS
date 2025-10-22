@@ -35,16 +35,12 @@ If you find our paper useful in your research, please consider citing:
 
 ## Seal Detection
 ### Baseline Performance
-| Model       | Param.   | FLOPs    | AP<sub>50</sub><sup>val</sup> | AP<sub>50:95</sub><sup>val</sup> | AP<sub>50</sub><sup>test</sup> | AP<sub>50:95</sub><sup>test</sup> |
-| :--:       | :-:      | :-:      | :-:                            | :-:                               | :-:                            | :-:                                |
-| YOLOv8m    | 25.86M   | 79.1G    | 99.5%                          | 92.4%                             | 97.9%                          | 87.9%                              |
-| YOLOv9m    | 20.16M   | 77.5G    | 99.5%                          | 91.5%                             | 98.5%                          | 89.9%                              |
-| YOLOv10m   | 16.49M   | 64.0G    | 99.5%                          | 91.8%                             | 97.0%                          | 89.0%                              |
-| YOLO11m    | 20.05M   | 68.2G    | 99.5%                          | 96.4%                             | 98.7%                          | 89.6%                              |
-| YOLOv8l    | 43.63M   | 165.4G   | 99.5%                          | 94.4%                             | 98.7%                          | 91.1%                              |
-| YOLOv9c    | 25.53M   | 103.7G   | 99.5%                          | 93.9%                             | 98.0%                          | 89.2%                              |
-| YOLOv10l   | 25.77M   | 127.2G   | 99.5%                          | 93.7%                             | 96.5%                          | 88.5%                              |
-| YOLO11l    | 25.31M   | 87.3G    | 99.5%                          | 95.5%                             | 98.7%                          | 88.7%                              |
+| Model     | Param.   | FLOPs    | AP<sub>50</sub><sup>Kuzushiji</sup> | AP<sub>50:95</sub><sup>Kuzushiji</sup> | AP<sub>50</sub><sup>Seal</sup> | AP<sub>50:95</sub><sup>Seal</sup> |
+| :--:      | :-:      | :-:      | :-:                                  | :-:                                    | :-:                             | :-:                                |
+| YOLOv8m   | 25.86M   | 79.1G    | 96.4%                                | 71.2%                                  | 99.1%                           | 86.2%                              |
+| YOLOv9m   | 20.16M   | 77.5G    | 96.3%                                | 71.7%                                  | 97.2%                           | 81.4%                              |
+| YOLOv10m  | 16.49M   | 64.0G    | 96.2%                                | 71.4%                                  | 99.1%                           | 85.7%                              |
+| YOLOv11m  | 20.05M   | 68.2G    | 97.8%                                | 74.1%                                  | 98.5%                           | 85.7%                              |
 
 ### Pretrained Models
 You can download our pretrained models [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/Er-w8GewvF1OhD1NK-3zqD4BhF15-o4Bc9txTcz-IetBBA?e=RkJFgK).
