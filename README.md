@@ -10,7 +10,7 @@
 ### Track 1: Text and Seal Detection
 Seals may overlap with Kuzushiji characters (or other seals) and appear with faint ink, adversely affecting detection accuracy. 
 
-You can download our dataset for **Track 1: Text and Seal Detection** from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/EhOn3QlrciNLtCXkdwY2y5oBbcjT6zlbpUaA7Xuj-DkFfg?e=N3dXWE).
+You can download our dataset for **Track 1: Text and Seal Detection** from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/EtG5Wk7FIatCh5J0Y967n2oBNGj9DAMq_MdPyBO7gYq1FA?e=5SsERw).
 <p align="left">
   <img src="img/fig_track1.png" width="640" title="details">
 </p>
