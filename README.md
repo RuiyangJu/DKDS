@@ -1,5 +1,6 @@
 # Degraded Kuzushiji Documents with Seals (DKDS)
 >[DKDS: A Benchmark Dataset of Degraded Kuzushiji Documents with Seals for Detection and Binarization]()
+
 >[Project]()
 
 ## Teaser
