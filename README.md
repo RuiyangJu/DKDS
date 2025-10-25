@@ -1,6 +1,6 @@
 # Degraded Kuzushiji Documents with Seals (DKDS)
 >[arXiv]()
->[Project]()
+>[Project](https://ruiyangju.github.io/DKDS)
 
 ## Teaser
 <p align="center">
