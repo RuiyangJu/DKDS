@@ -8,12 +8,11 @@
 
 ## Tracks & Challenge
 ### Track 1: Text and Seal Detection
+Text and seal detection serves as a crucial preliminary step for subsequent Kuzushiji OCR and seal analysis.
+However, this task is challenging because seals may suffer from ink fading (left two) or overlap with Kuzushiji characters or other seals (right two), which often leads to reduced detection accuracy.
 <p align="left">
   <img src="img/fig_track1.png" width="640" title="details">
 </p>
-Text and seal detection serves as a crucial preliminary step for subsequent Kuzushiji OCR and seal analysis.
-However, this task is challenging because seals may suffer from ink fading (left two) or overlap with Kuzushiji characters or other seals (right two), which often leads to reduced detection accuracy.
-
 You can download our dataset for **Track 1: Text and Seal Detection** from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/EtG5Wk7FIatCh5J0Y967n2oBNGj9DAMq_MdPyBO7gYq1FA?e=5SsERw).
 
 ### Track 2: Document Binarization
