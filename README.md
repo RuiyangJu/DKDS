@@ -10,6 +10,7 @@
 ### Track 1: Text and Seal Detection
 Text and seal detection serves as a crucial preliminary step for subsequent Kuzushiji OCR and seal analysis.
 However, this task is challenging because seals may suffer from ink fading (left two) or overlap with Kuzushiji characters or other seals (right two), which often leads to reduced detection accuracy.
+
 <p align="left">
   <img src="img/fig_track1.png" width="640" title="details">
 </p>
@@ -17,11 +18,12 @@ However, this task is challenging because seals may suffer from ink fading (left
 You can download our dataset for **Track 1: Text and Seal Detection** from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/EtG5Wk7FIatCh5J0Y967n2oBNGj9DAMq_MdPyBO7gYq1FA?e=5SsERw).
 
 ### Track 2: Document Binarization
+Document binarization aims to improve the accuracy of downstream OCR systems. In this task, the objective is to remove seals while preserving, or even restoring, Kuzushiji characters as much as possible. 
+This process becomes particularly challenging when the Kuzushiji characters overlap with seals.
+
 <p align="left">
   <img src="img/fig_track2.png" width="640" title="details">
 </p>
-In the document binarization task, the goal is to remove seals while preserving (or even restoring) the Kuzushiji characters as much as possible. 
-This becomes particularly difficult when the Kuzushiji characters and seals overlap.
 
 You can download our dataset for **Track 2: Document Binarization** from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/Ekg5I9tnsJJNoVQJWfUO4aQBZ0AdgZ1wUbDBw3z_8FW5nw?e=qsezUG).
 
