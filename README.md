@@ -2,7 +2,6 @@
 >[arXiv]()
 >[Project](https://ruiyangju.github.io/DKDS)
 
-## Teaser
 <p align="center">
   <img src="img/fig_teaser.png" width="1024" title="details">
 </p>
