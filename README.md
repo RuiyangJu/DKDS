@@ -8,12 +8,12 @@
 
 ## Tracks & Challenge
 ### Track 1: Text and Seal Detection
-Seals may overlap with Kuzushiji characters (or other seals) and appear with faint ink, adversely affecting detection accuracy. 
-
-You can download our dataset for **Track 1: Text and Seal Detection** from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/EtG5Wk7FIatCh5J0Y967n2oBNGj9DAMq_MdPyBO7gYq1FA?e=5SsERw).
 <p align="left">
   <img src="img/fig_track1.png" width="640" title="details">
 </p>
+Seals may overlap with Kuzushiji characters (or other seals) or suffer from ink fading, thereby reducing detection accuracy.
+
+You can download our dataset for **Track 1: Text and Seal Detection** from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/EtG5Wk7FIatCh5J0Y967n2oBNGj9DAMq_MdPyBO7gYq1FA?e=5SsERw).
 
 ### Track 2: Document Binarization
 When seals overlap with Kuzushiji characters, removing the seals while preserving (or even restoring) the underlying characters poses a significant challenge.
