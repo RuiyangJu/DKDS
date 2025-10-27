@@ -16,12 +16,13 @@ Seals may overlap with Kuzushiji characters (or other seals) or suffer from ink 
 You can download our dataset for **Track 1: Text and Seal Detection** from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/EtG5Wk7FIatCh5J0Y967n2oBNGj9DAMq_MdPyBO7gYq1FA?e=5SsERw).
 
 ### Track 2: Document Binarization
-When seals overlap with Kuzushiji characters, removing the seals while preserving (or even restoring) the underlying characters poses a significant challenge.
-
-You can download our dataset for **Track 2: Document Binarization** from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/Ekg5I9tnsJJNoVQJWfUO4aQBZ0AdgZ1wUbDBw3z_8FW5nw?e=qsezUG).
 <p align="left">
   <img src="img/fig_track2.png" width="640" title="details">
 </p>
+In the document binarization task, the goal is to remove seals while preserving (or even restoring) the Kuzushiji characters as much as possible. 
+This becomes particularly difficult when the Kuzushiji characters and seals overlap.
+
+You can download our dataset for **Track 2: Document Binarization** from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/Ekg5I9tnsJJNoVQJWfUO4aQBZ0AdgZ1wUbDBw3z_8FW5nw?e=qsezUG).
 
 ## Citation
 If you find our paper useful in your research, please consider citing:
