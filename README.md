@@ -100,6 +100,7 @@ This benchmark dataset is licensed under a [Creative Commons Attribution-ShareAl
 ### Original Kuzushiji Dataset
 
 The original Kuzushiji dataset used in this work is based on **『日本古典籍くずし字データセット』** (National Institute of Japanese Literature / CODH), provided by [ROIS-DS Center for Open Data in the Humanities (CODH)](https://codh.rois.ac.jp/), which is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
+
 The following is the citation of the original Kuzushiji dataset; please cite it when using our benchmark dataset:
 ```
   『日本古典籍くずし字データセット』 （国文研所蔵／CODH加工） doi:10.20676/00000340
