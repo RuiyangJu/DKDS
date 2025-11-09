@@ -91,3 +91,12 @@ For train and test the GAN model, please follow the instructions below:
   python gan_train.py
   python gan_test.py
 ```
+
+## License
+
+<img src="./images/CC-BY-SA.png" alt="CC BY-SA 4.0 License" width="24" style="vertical-align: middle;">  
+This benchmark dataset is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
+
+### Original Kuzushiji Dataset
+
+The original Kuzushiji dataset used in this work is based on **『日本古典籍くずし字データセット』** (National Institute of Japanese Literature / CODH), provided by [ROIS-DS Center for Open Data in the Humanities (CODH)](https://codh.rois.ac.jp/), which is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
