@@ -94,7 +94,7 @@ For train and test the GAN model, please follow the instructions below:
 
 ## License
 
-<img src="./img/CC-BY-SA.png" alt="CC BY-SA 4.0 License" width="64" style="vertical-align: middle;">  
+<img src="./img/CC-BY-SA.png" alt="CC BY-SA 4.0 License" width="128" style="vertical-align: middle;">  
 This benchmark dataset is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
 
 ### Original Kuzushiji Dataset
