@@ -30,6 +30,12 @@ You can download our dataset for **Track 2: Document Binarization** from [here](
 ## Citation
 If you find our paper useful in your research, please consider citing:
 ```
+  @article{ju2025dkds,
+    title={DKDS: A Benchmark Dataset of Degraded Kuzushiji Documents with Seals for Detection and Binarization},
+    author={Ju, Rui-Yang and Yamashita, Kohei and Kameko, Hirotaka and Mori, Shinsuke},
+    journal={arXiv preprint arXiv:2511.09117},
+    year={2025}
+  }
 ```
 
 # Baseline Methods
