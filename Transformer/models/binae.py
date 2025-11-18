@@ -63,6 +63,12 @@ class BinModel(nn.Module):
 
         # calculate the loss with gt
         gt_patches = self.to_patch(gt_img)
-        loss = F.mse_loss(pred_pixel_values, gt_patches)
+        mean = torch.tensor([0.485,0.456,0.406], device=img.device).view(1,1,3)
+        std  = torch.tensor([0.229,0.224,0.225], device=img.device).view(1,1,3)
+
+        # [B, num_patches, patch_size*patch_size*3]
+        gt_pixel = gt_patches * std + mean
+
+        loss = F.mse_loss(pred_pixel_values, gt_pixel)
 
         return loss, patches, pred_pixel_values
