@@ -4,7 +4,7 @@
 ```
 
 ## Environment
-`requirements.txt`. in original repository can't fit on GPU 3090, please our new requirements.txt.
+`requirements.txt`. in original repository can't fit on GPU 3090, please our new `requirements.txt`.
 ```
   conda create -n docentr python=3.8
   pip install -r requirements.txt
