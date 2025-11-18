@@ -1,11 +1,14 @@
 # DocEnTR (Forked from [dali92002/DocEnTR](https://github.com/dali92002/DocEnTR/))
 **ICPR 2022:** DocEnTr: An end-to-end document image enhancement transformer
+
+## Clone Repository
 ```
   git clone https://github.com/dali92002/DocEnTR.git
 ```
 
-## Environment
-* `requirements.txt`. in original repository can't fit on GPU 3090, please our new `requirements.txt`.
+## Environment Setup
+* The original `requirements.txt` may not work efficiently on an NVIDIA 3090 GPU.
+* Please use the provided `requirements.txt` in this repository.
 
 ```
   conda create -n docentr python=3.8
