@@ -1,4 +1,5 @@
 # DocEnTR (Forked from [dali92002/DocEnTR](https://github.com/dali92002/DocEnTR/))
+**ICPR 2022:** DocEnTr: An end-to-end document image enhancement transformer
 ```
   git clone https://github.com/dali92002/DocEnTR.git
 ```
