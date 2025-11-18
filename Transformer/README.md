@@ -1,7 +1,13 @@
-# This is forked by https://github.com/dali92002/DocEnTR/
+# This is forked by https://github.com/dali92002/DocEnTR/.
+
+## Environment
+```
+  conda create -n docentr python=3.8
+  pip install -r requirements.txt
+```
+
 
 ## Citation
-
 If you find this useful for your research, please cite it as follows:
 
 ```bash
