@@ -18,8 +18,7 @@ Please use the provided `requirements.txt` in this repository.
 python process_dibco.py 
 
 ## Dataset
-* Prepare your dataset in the following structure (example folder: `Resize_512`):
-* Make sure each subfolder contains corresponding images with the same filenames.
+* Prepare your dataset in the following structure:
 
 ```
   ./Resize_512/
