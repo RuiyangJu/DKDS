@@ -1,6 +1,6 @@
 # This is forked by https://github.com/dali92002/DocEnTR/.
 ```
-https://github.com/dali92002/DocEnTR.git
+  git clone https://github.com/dali92002/DocEnTR.git
 ```
 
 ## Environment
