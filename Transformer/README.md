@@ -17,6 +17,7 @@ Please use the provided `requirements.txt` in this repository.
 
 ## Dataset
 * Prepare your dataset in the following structure (example folder: `Resize_512`):
+* Make sure each subfolder contains corresponding images with the same filenames.
 
 ```
   ./Resize_512/
