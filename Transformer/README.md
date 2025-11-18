@@ -9,9 +9,9 @@
 ## Environment Setup
 * The original `requirements.txt` may not work efficiently on an NVIDIA 3090 GPU.
 Please use the provided `requirements.txt` in this repository.
-
 ```
   conda create -n docentr python=3.8
+  conda activate docentr
   pip install -r requirements.txt
 ```
 
