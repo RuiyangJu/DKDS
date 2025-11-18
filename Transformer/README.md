@@ -16,7 +16,7 @@ Please use the provided `requirements.txt` in this repository.
 ```
 
 ## Dataset
-* Revise `Resize_512` folder as follow:
+* Prepare your dataset in the following structure (example folder: `Resize_512`):
 
 ```
 ./Resize_512/
