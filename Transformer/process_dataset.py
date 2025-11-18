@@ -66,7 +66,6 @@ def prepare_dibco_experiment(input_root, output_root, train_folder, val_folder, 
 
 
 if __name__ == "__main__":
-    # 設定參數
     input_root = './dataset' 
     output_root = './processed' 
     train_folder = 'train'
