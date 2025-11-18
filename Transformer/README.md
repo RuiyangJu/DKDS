@@ -1,11 +1,6 @@
 # DocEnTR (Forked from [dali92002/DocEnTR](https://github.com/dali92002/DocEnTR/))
 **ICPR 2022:** DocEnTr: An end-to-end document image enhancement transformer
 
-## Clone Repository
-```
-  git clone https://github.com/dali92002/DocEnTR.git
-```
-
 ## Environment Setup
 * The original `requirements.txt` may not work efficiently on an NVIDIA 3090 GPU.
 Please use the provided `requirements.txt` in this repository.
@@ -15,44 +10,29 @@ Please use the provided `requirements.txt` in this repository.
   pip install -r requirements.txt
 ```
 
-python process_dibco.py 
-
 ## Dataset
 * Prepare your dataset in the following structure:
 
 ```
-  ./Resize_512/
+  ./dataset/
   │
   ├── train/                        
-  │   ├── 1.png
-  │   ├── 2.png
-  │   └── ...
-  │
-  ├── train_gt/                    
-  │   ├── 1.png
-  │   ├── 2.png
-  │   └── ...
+  │   ├── imgs
+  │   └── gt_imgs
   │
   ├── valid/                        
-  │   ├── 1.png
-  │   ├── 2.png
-  │   ├── ...
+  │   ├── imgs
+  │   └── gt_imgs
   │
-  ├── valid_gt/ 
-  │   ├── 1.png
-  │   ├── 2.png
-  │   └── ...
-  │
-  ├── test/                     
-  │   ├── 1.png
-  │   ├── 2.png
-  │   └── ...
-  │
-  └── test_gt/                       
-      ├── 1.png
-      ├── 2.png
-      └── ...
+  └── test/                     
+      ├── imgs
+      └── gt_imgs
 ```
+* Data Splitting:
+```
+  python process_dibco.py 
+```
+
 
 ## Train
 ```
