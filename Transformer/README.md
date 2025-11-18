@@ -62,10 +62,10 @@ Please use the provided `requirements.txt` in this repository.
 If you find this useful for your research, please cite it as follows:
 
 ```
-    @inproceedings{souibgui2022docentr,
-      title={DocEnTr: An end-to-end document image enhancement transformer},
-      author={Souibgui, Mohamed Ali and Biswas, Sanket and  Jemni, Sana Khamekhem and Kessentini, Yousri and Forn{\'e}s, Alicia and Llad{\'o}s, Josep and Pal, Umapada},
-      booktitle={2022 26th International Conference on Pattern Recognition (ICPR)},
-      year={2022}
-    }
+  @inproceedings{souibgui2022docentr,
+    title={DocEnTr: An end-to-end document image enhancement transformer},
+    author={Souibgui, Mohamed Ali and Biswas, Sanket and Jemni, Sana Khamekhem and Kessentini, Yousri and Forn{\'e}s, Alicia and Llad{\'o}s, Josep and Pal, Umapada},
+    booktitle={2022 26th International Conference on Pattern Recognition (ICPR)},
+    year={2022}
+  }
 ```
