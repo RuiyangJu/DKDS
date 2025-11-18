@@ -115,7 +115,7 @@ def count_psnr(epoch, data_path, valid_data='2018',setting='',flipped = False , 
     total_psnr = 0
     qo = 0
     
-    gt_folder = data_path + 'DIBCOSETS/' + valid_data + '/gt_imgs' 
+    gt_folder = data_path + valid_data + '/gt_imgs' 
     gt_imgs = os.listdir(gt_folder)
     flip_status = 'flipped' if flipped else 'normal'
     
