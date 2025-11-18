@@ -2,7 +2,7 @@
 **ICPR 2022:** DocEnTr: An end-to-end document image enhancement transformer
 
 ## Environment Setup
-* The original `requirements.txt` may not work efficiently on an NVIDIA 3090 GPU.
+* The original `requirements.txt` may not work on an NVIDIA 3090 GPU.
 Please use the provided `requirements.txt` in this repository.
 ```
   conda create -n docentr python=3.8
