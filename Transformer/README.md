@@ -11,6 +11,9 @@
   pip install -r requirements.txt
 ```
 
+## Dataset
+* Put our `
+
 ```
 python train.py --data_path ./dataset/ --batch_size 4 --vit_model_size small --vit_patch_size 8 --epochs 100 --split_size 512 --validation_dataset valid
 ```
