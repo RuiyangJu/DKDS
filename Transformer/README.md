@@ -1,4 +1,4 @@
-# This repository is forked by https://github.com/dali92002/DocEnTR/.
+# DocEnTR (Forked from [dali92002/DocEnTR](https://github.com/dali92002/DocEnTR/))
 ```
   git clone https://github.com/dali92002/DocEnTR.git
 ```
