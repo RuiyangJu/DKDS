@@ -57,7 +57,7 @@ python process_dibco.py
 
 ## Train
 ```
-  python train.py --data_path ./Resize_512/ --batch_size 4 --vit_model_size small --vit_patch_size 8 --epochs 100 --split_size 512 --validation_dataset valid
+  python train.py --data_path ./processed/ --batch_size 4 --vit_model_size small --vit_patch_size 8 --epochs 100 --split_size 512 --validation_dataset valid
 ```
 
 ## Citation
