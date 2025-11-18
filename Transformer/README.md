@@ -8,7 +8,7 @@
 
 ## Environment Setup
 * The original `requirements.txt` may not work efficiently on an NVIDIA 3090 GPU.
-* Please use the provided `requirements.txt` in this repository.
+Please use the provided `requirements.txt` in this repository.
 
 ```
   conda create -n docentr python=3.8
