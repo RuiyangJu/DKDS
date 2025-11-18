@@ -19,37 +19,37 @@ Please use the provided `requirements.txt` in this repository.
 * Prepare your dataset in the following structure (example folder: `Resize_512`):
 
 ```
-./Resize_512/
-│
-├── train/                        
-│   ├── 1.png
-│   ├── 2.png
-│   └── ...
-│
-├── train_gt/                    
-│   ├── 1.png
-│   ├── 2.png
-│   └── ...
-│
-├── valid/                        
-│   ├── 1.png
-│   ├── 2.png
-│   ├── ...
-│
-├── valid_gt/ 
-│   ├── 1.png
-│   ├── 2.png
-│   └── ...
-│
-├── test/                     
-│   ├── 1.png
-│   ├── 2.png
-│   └── ...
-│
-└── test_gt/                       
-    ├── 1.png
-    ├── 2.png
-    └── ...
+  ./Resize_512/
+  │
+  ├── train/                        
+  │   ├── 1.png
+  │   ├── 2.png
+  │   └── ...
+  │
+  ├── train_gt/                    
+  │   ├── 1.png
+  │   ├── 2.png
+  │   └── ...
+  │
+  ├── valid/                        
+  │   ├── 1.png
+  │   ├── 2.png
+  │   ├── ...
+  │
+  ├── valid_gt/ 
+  │   ├── 1.png
+  │   ├── 2.png
+  │   └── ...
+  │
+  ├── test/                     
+  │   ├── 1.png
+  │   ├── 2.png
+  │   └── ...
+  │
+  └── test_gt/                       
+      ├── 1.png
+      ├── 2.png
+      └── ...
 ```
 
 ## Train
