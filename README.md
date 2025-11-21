@@ -69,6 +69,9 @@ You can download our pretrained models [here](https://1drv.ms/f/c/56c255dd1bb9ae
 Please revise the `/path/to/data` in `meta.yaml`.
 ```
   yolo val model=yolov8m.pt data=meta.yaml
+  yolo val model=yolov9m.pt data=meta.yaml
+  yolo val model=yolov10m.pt data=meta.yaml
+  yolo val model=yolo11m.pt data=meta.yaml
 ```
 
 ## Document Binarization
