@@ -101,7 +101,7 @@ Please place ``GAN_efficientnet-b5_50_0.00002`` in the ``./weights/`` folder bef
   python gan_test.py
 ```
 
-## License
+# License
 <img src="./img/CC-BY-SA.png" alt="CC BY-SA 4.0 License" width="100" style="vertical-align: middle;">  
 
 This benchmark dataset is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
