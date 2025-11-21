@@ -78,11 +78,7 @@ The YOLO series of models are trained and evaluated using the following instruct
 | K-means + Sauvola | 88.59 | 91.48 | 18.65dB | 6.37 | 73.09 |
 | GAN | 98.11 | 98.14 | 26.53dB | 0.82 | 80.49 |
 
-### Pretrained Models
-You can download our pretrained models [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/EvyWW4yx5e5OiqstmHWFXYMBe9z3Z3RwSB4bAMwcgkw_bg?e=3lGaP9).
-Please place ``GAN_efficientnet-b5_50_0.00002`` in the ``weights`` folder before running ``gan_test.py``.
-
-### Train & Evaluate
+### Train
 For traditional algorithms, please follow the instruction below:
 ```
   python traditional.py
@@ -97,6 +93,11 @@ For train and test the GAN model, please follow the instructions below:
   python gan_train.py
   python gan_test.py
 ```
+
+### Test
+#### Pretrained Models
+You can download our pretrained models [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/EvyWW4yx5e5OiqstmHWFXYMBe9z3Z3RwSB4bAMwcgkw_bg?e=3lGaP9).
+Please place ``GAN_efficientnet-b5_50_0.00002`` in the ``weights`` folder before running ``gan_test.py``.
 
 ## License
 <img src="./img/CC-BY-SA.png" alt="CC BY-SA 4.0 License" width="100" style="vertical-align: middle;">  
