@@ -93,7 +93,7 @@ For traditional algorithms, please follow the instruction below:
 ```
 For k-means + traditional algorithms, please follow the instruction below:
 ```
-  python ./algorithm/kmeans.py
+  python ./algorithm/kmeans_traditional.py
 ```
 For train the GAN model, please follow the instructions below:
 ```
