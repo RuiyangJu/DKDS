@@ -41,7 +41,7 @@ If you find our paper useful in your research, please consider citing:
 # Baseline Methods
 ## Environment
 ```
-  conda create -n DKDS python=3.9
+  conda create -n DKDS python=3.10
   pip install -r requirements.txt
 ```
 
