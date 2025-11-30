@@ -25,7 +25,7 @@ This process becomes particularly challenging when the Kuzushiji characters over
   <img src="img/fig_track2.png" width="640" title="details">
 </p>
 
-You can download our dataset for **Track 2: Document Binarization** from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/Ekg5I9tnsJJNoVQJWfUO4aQBZ0AdgZ1wUbDBw3z_8FW5nw?e=qsezUG).
+You can download our dataset for **Track 2: Document Binarization** from [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDRuVpOxSGrQoeSdGPeu59qATRo_QwDKvzHT8gTu4GKtRQ).
 
 # Citation
 If you find our paper useful in your research, please consider citing:
