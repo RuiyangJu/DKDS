@@ -37,7 +37,6 @@ model.eval()
 total_params = sum(p.numel() for p in model.parameters())
 trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
 print(f"Total parameters: {total_params/1e6:.2f} M")
-print(f"Trainable parameters: {trainable_params/1e6:.2f} M")
 
 preprocess_input = get_preprocessing_fn(opt.base_model_name, pretrained=opt.encoder_weights)
 
