@@ -89,11 +89,11 @@ Please revise the `/path/to/data` in `meta.yaml`.
 ### Train
 For traditional algorithms, please follow the instruction below:
 ```
-  python traditional.py
+  python ./algorithm/traditional.py
 ```
 For k-means + traditional algorithms, please follow the instruction below:
 ```
-  python kmeans.py
+  python ./algorithm/kmeans.py
 ```
 For train the GAN model, please follow the instructions below:
 ```
