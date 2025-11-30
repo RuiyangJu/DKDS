@@ -97,8 +97,8 @@ For k-means + traditional algorithms, please follow the instruction below:
 ```
 For train the GAN model, please follow the instructions below:
 ```
-  python image_to_512.py
-  python gan_train.py
+  python ./GAN/image_to_512.py
+  python ./GAN/gan_train.py
 ```
 
 ### Test
@@ -106,7 +106,7 @@ For train the GAN model, please follow the instructions below:
 You can download our pretrained GAN-based models [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/EvyWW4yx5e5OiqstmHWFXYMBe9z3Z3RwSB4bAMwcgkw_bg?e=3lGaP9).
 Please place ``GAN_efficientnet-b5_50_0.00002`` in the ``./weights/`` folder before running ``gan_test.py``.
 ```
-  python gan_test.py
+  python ./GAN/gan_test.py
 ```
 
 # License
