@@ -110,7 +110,8 @@ Please place ``GAN_efficientnet-b5_50_0.00002`` in the ``./weights/`` folder bef
   python ./Ours/gan_test.py
 ```
 
-### Evalute Suh et al. ([Pattern Recognition 2024](https://www.sciencedirect.com/science/article/abs/pii/S0031320322002916))
+### Evalute other SOTA methods
+#### Suh et al. ([Pattern Recognition 2024](https://www.sciencedirect.com/science/article/abs/pii/S0031320322002916))
 You can download the pretrained model of Suh *et al.* [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCLNE31DA6PRKFYZme5pDmTAVuuf6BrJPrnpIF15ktVSp4?e=Oxe79T).
 ```
   python ./Suh/test.py --lambda_bce 50 --base_model_name efficientnet-b5 --batch_size 16
