@@ -112,7 +112,7 @@ Please place ``GAN_efficientnet-b5_50_0.00002`` in the ``./weights/`` folder bef
 
 ### Evalute Suh et al. ([Pattern Recognition 2024](https://www.sciencedirect.com/science/article/abs/pii/S0031320322002916))
 ```
-  python test.py --lambda_bce 50 --base_model_name efficientnet-b5 --batch_size 16
+  python ./suh/test.py --lambda_bce 50 --base_model_name efficientnet-b5 --batch_size 16
 ```
 
 # License
