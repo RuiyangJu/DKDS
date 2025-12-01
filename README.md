@@ -104,13 +104,14 @@ For train the GAN model, please follow the instructions below:
 
 ### Test
 #### Pretrained Models
-You can download our pretrained GAN-based models [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/EvyWW4yx5e5OiqstmHWFXYMBe9z3Z3RwSB4bAMwcgkw_bg?e=3lGaP9).
+You can download our pretrained cGAN-based model [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/EvyWW4yx5e5OiqstmHWFXYMBe9z3Z3RwSB4bAMwcgkw_bg?e=3lGaP9).
 Please place ``GAN_efficientnet-b5_50_0.00002`` in the ``./weights/`` folder before running ``gan_test.py``.
 ```
   python ./Ours/gan_test.py
 ```
 
 ### Evalute Suh et al. ([Pattern Recognition 2024](https://www.sciencedirect.com/science/article/abs/pii/S0031320322002916))
+You can download the pretrained model of Suh et al. [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCLNE31DA6PRKFYZme5pDmTAVuuf6BrJPrnpIF15ktVSp4?e=Oxe79T).
 ```
   python ./Suh/test.py --lambda_bce 50 --base_model_name efficientnet-b5 --batch_size 16
 ```
