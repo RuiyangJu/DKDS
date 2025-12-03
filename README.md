@@ -116,7 +116,7 @@ You can download the pretrained model of Suh *et al.* ([PR 2022](https://www.sci
 
 You can download the pretrained model of Ju *et al.* ([KBS 2024](https://www.sciencedirect.com/science/article/abs/pii/S0950705124011766)) here.
 ```
-  python ./Suh/test.py --lambda_bce 50 --base_model_name efficientnet-b5 --batch_size 16
+  python ./SOTA/test.py --lambda_bce 50 --base_model_name efficientnet-b5 --batch_size 16
 ```
 
 # License
