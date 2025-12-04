@@ -14,7 +14,7 @@ from Base.metrics import get_metric
 parser = argparse.ArgumentParser()
 parser.add_argument("--gpu", type=str, default='0', help="GPU number")
 parser.add_argument('--lambda_bce', type=float, default=50.0, help='bce weight')
-parser.add_argument('--base_model_name', type=str, default='efficientnet-b4', help='base_model_name')
+parser.add_argument('--base_model_name', type=str, default='efficientnet-b5', help='base_model_name')
 parser.add_argument('--encoder_weights', type=str, default='imagenet', help='encoder_weights')
 parser.add_argument('--generator_lr', type=float, default=2e-4, help='generator learning rate')
 parser.add_argument('--discriminator_lr', type=float, default=2e-4, help='discriminator learning rate')
@@ -150,6 +150,7 @@ padding_resize_ratio = 4
 
 # make directoies
 save_root_dir = './Suh_Results/predicted_images'
+# save_root_dir = './Ju_Results/predicted_images'
 os.makedirs(save_root_dir, exist_ok=True)
 
 # CSV file
@@ -219,7 +220,7 @@ for test_image, test_mask in tqdm(test_images, desc="Processing images"):
                 ps = step
                 pe = min(step + batch_size, len(color_patches))
 
-                batch_np = np.array(color_patches[ps:pe])  # NHWC
+                batch_np = np.array(color_patches[ps:pe])  
                 batch_tensor = torch.from_numpy(batch_np).permute(0, 3, 1, 2).float().to(device)
                 batch_pred = torch.sigmoid(models[channel](batch_tensor)).cpu()
                 preds.extend(batch_pred)
