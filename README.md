@@ -100,26 +100,26 @@ Please revise the `/path/to/data` in `meta.yaml`.
 | GAN | 98.11 | 98.14 | 26.53dB | 0.82 | 80.49 |
 
 ### Train
-For train the GAN model, please follow the instructions below:
+For **train** our model, please follow the instructions below:
 ```
   python ./Ours/image_to_512.py
   python ./Ours/gan_train.py
 ```
 
-### Test
+### Pretrained Models
+You can download our pretrained cGAN-based model [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/EvyWW4yx5e5OiqstmHWFXYMBe9z3Z3RwSB4bAMwcgkw_bg?e=3lGaP9).
+Please place ``GAN_efficientnet-b5_50_0.00002`` in the ``./weights/`` folder before running ``gan_test.py``.
 
-For traditional algorithms, please follow the instruction below:
+### Test
+For **traditional** algorithms, please follow the instruction below:
 ```
   python ./algorithm/traditional.py
 ```
-For k-means + traditional algorithms, please follow the instruction below:
+For **k-means + traditional** algorithms, please follow the instruction below:
 ```
   python ./algorithm/kmeans_traditional.py
 ```
-
-#### Pretrained Models
-You can download our pretrained cGAN-based model [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/EvyWW4yx5e5OiqstmHWFXYMBe9z3Z3RwSB4bAMwcgkw_bg?e=3lGaP9).
-Please place ``GAN_efficientnet-b5_50_0.00002`` in the ``./weights/`` folder before running ``gan_test.py``.
+For **our** method, please follow the instruction below:
 ```
   python ./Ours/gan_test.py
 ```
