@@ -5,6 +5,7 @@ import csv
 from tqdm import tqdm
 import argparse
 from Base.metrics import get_metric
+from sklearn.cluster import KMeans
 from skimage.filters import threshold_otsu, threshold_niblack, threshold_sauvola
 
 parser = argparse.ArgumentParser()
