@@ -74,17 +74,17 @@ Please revise the `/path/to/data` in `meta.yaml`.
 ### ``Valid`` is Testing-E set
 ```
   yolo val model='./Pretrained Models for Seal Detection/yolov8m.pt' data=meta.yaml
-  yolo val model=yolov9m.pt data=meta.yaml
-  yolo val model=yolov10m.pt data=meta.yaml
-  yolo val model=yolo11m.pt data=meta.yaml
+  yolo val model='./Pretrained Models for Seal Detection/yolov9m.pt' data=meta.yaml
+  yolo val model='./Pretrained Models for Seal Detection/yolov10m.pt' data=meta.yaml
+  yolo val model='./Pretrained Models for Seal Detection/yolo11m.pt' data=meta.yaml
 ```
 
 ### ``test`` is Testing-D set
 ```
-  yolo val model=yolov8m.pt data=meta.yaml val=dataset/test/images
-  yolo val model=yolov9m.pt data=meta.yaml val=dataset/test/images
-  yolo val model=yolov10m.pt data=meta.yaml val=dataset/test/images
-  yolo val model=yolo11m.pt data=meta.yaml val=dataset/test/images
+  yolo val model='./Pretrained Models for Seal Detection/yolov8m.pt' data=meta.yaml val=dataset/test/images
+  yolo val model='./Pretrained Models for Seal Detection/yolov9m.pt' data=meta.yaml val=dataset/test/images
+  yolo val model='./Pretrained Models for Seal Detection/yolov10m.pt' data=meta.yaml val=dataset/test/images
+  yolo val model='./Pretrained Models for Seal Detection/yolo11m.pt' data=meta.yaml val=dataset/test/images
 ```
 
 ## Document Binarization
