@@ -24,6 +24,7 @@ parser.add_argument('--threshold', type=float, default=0.3, help='binarization t
 # data set
 parser.add_argument('--image_test_dir', type=str, default='./Testset/image/', help='original image test dir')
 parser.add_argument('--mask_test_dir', type=str, default='./Testset/mask/', help='original mask test dir')
+parser.add_argument('--save_root_dir', type=str, default='./Result', help='folder to save predicted masks and metrics')
 
 opt = parser.parse_args()
 
@@ -149,8 +150,7 @@ skip_max_length = 512
 padding_resize_ratio = 4
 
 # make directoies
-save_root_dir = './Suh_Results/predicted_images'
-# save_root_dir = './Ju_Results/predicted_images'
+save_root_dir = opt.save_root_dir
 os.makedirs(save_root_dir, exist_ok=True)
 
 # CSV file
