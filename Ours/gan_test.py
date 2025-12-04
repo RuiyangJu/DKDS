@@ -19,6 +19,7 @@ parser.add_argument('--batch_size', type=int, default=16, help='batch size')
 parser.add_argument('--threshold', type=float, default=0.5, help='binarization threshold, 0~1')
 parser.add_argument('--image_test_dir', type=str, default='./Testset/image/', help='test image dir')
 parser.add_argument('--mask_test_dir', type=str, default='./Testset/mask/', help='test mask dir')
+parser.add_argument('--save_root_dir', type=str, default='./GAN_Predicted_Images', help='folder to save predicted masks and metrics')
 parser.add_argument('--weight_folder', type=str, default='./weights/GAN_efficientnet-b5_50_0.0002/', help='weight folder')
 parser.add_argument('--resize_global', action='store_true', help='whether to use full-image resize inference')
 parser.add_argument('--resize_size', type=int, default=512, help='size for global resize')
@@ -40,8 +41,9 @@ print(f"Total parameters: {total_params/1e6:.2f} M")
 
 preprocess_input = get_preprocessing_fn(opt.base_model_name, pretrained=opt.encoder_weights)
 
-save_root_dir = './GAN_Predicted_Images'
+save_root_dir = opt.save_root_dir
 os.makedirs(save_root_dir, exist_ok=True)
+
 save_csv = open(os.path.join(save_root_dir, 'metrics.csv'), 'w', newline='')
 save_csv_file = csv.writer(save_csv)
 save_csv_file.writerow(['Image', 'F-Measure', 'P-FMeasure', 'PSNR', 'DRD'])
