@@ -98,18 +98,8 @@ Please revise the `/path/to/data` in `meta.yaml`.
 | K-means + Sauvola | 88.59 | 91.48 | 18.65dB | 6.37 | 73.09 |
 | GAN | 98.11 | 98.14 | 26.53dB | 0.82 | 80.49 |
 
-### Train
-For training **our** model, please follow the instructions below:
-```
-  python ./Ours/image_to_512.py
-  python ./Ours/gan_train.py
-```
-
-### Pretrained Models
-You can download pretrained our model [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/EvyWW4yx5e5OiqstmHWFXYMBe9z3Z3RwSB4bAMwcgkw_bg?e=3lGaP9).
-Please place ``GAN_efficientnet-b5_50_0.00002`` in the ``./weights/`` folder before running ``gan_test.py``.
-
-### Test
+### Traditional Algorithom
+#### Test
 For testing **traditional** algorithms, please follow the instruction below:
 ```
   python ./algorithm/traditional.py --image_test_dir ./Testset-E/image/ --mask_test_dir ./Testset-E/mask/ --save_root_dir ./Traditional_Testing_E_Result/
@@ -120,6 +110,19 @@ For testing **k-means + traditional** algorithms, please follow the instruction 
   python ./algorithm/kmeans_traditional.py --image_test_dir ./Testset-E/image/ --mask_test_dir ./Testset-E/mask/ --save_root_dir ./KMeans_Testing_E_Result/
   python ./algorithm/kmeans_traditional.py --image_test_dir ./Testset-D/image/ --mask_test_dir ./Testset-D/mask/ --save_root_dir ./KMeans_Testing_D_Result/
 ```
+### Ours
+#### Train
+For training **our** model, please follow the instructions below:
+```
+  python ./Ours/image_to_512.py
+  python ./Ours/gan_train.py
+```
+
+#### Pretrained Models
+You can download pretrained our model [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/EvyWW4yx5e5OiqstmHWFXYMBe9z3Z3RwSB4bAMwcgkw_bg?e=3lGaP9).
+Please place ``GAN_efficientnet-b5_50_0.00002`` in the ``./weights/`` folder before running ``gan_test.py``.
+
+#### Test
 For testing **our** method, please follow the instruction below:
 ```
   python ./Ours/gan_test.py --image_test_dir ./Testset-E/image/ --mask_test_dir ./Testset-E/mask/ --save_root_dir ./Ours_Testing_E_Result/
@@ -133,6 +136,7 @@ You can download the pretrained model of Suh *et al.* ([PR 2022](https://www.sci
 You can download the pretrained model of Ju *et al.* ([KBS 2024](https://www.sciencedirect.com/science/article/abs/pii/S0950705124011766)) here.
 
 #### Test
+Please place ``Unet`` in the ``./weights/`` folder before running ``./SOTA/test.py``.
 ```
   python ./SOTA/test.py --lambda_bce 50 --base_model_name efficientnet-b5 --batch_size 16 --save_root_dir ./Suh_Testing_E_Result/
   python ./SOTA/test.py --lambda_bce 50 --base_model_name efficientnet-b5 --batch_size 16 --save_root_dir ./Suh_Testing_D_Result/
