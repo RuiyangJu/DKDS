@@ -129,7 +129,7 @@ For testing **our** method, please follow the instruction below:
   python ./Ours/gan_test.py --image_test_dir ./Testset-D/image/ --mask_test_dir ./Testset-D/mask/ --save_root_dir ./Ours_Testing_D_Result/
 ```
 
-### Test other SOTA methods
+### Other SOTA methods
 #### Pretrained Models
 You can download the pretrained model of Suh *et al.* ([PR 2022](https://www.sciencedirect.com/science/article/abs/pii/S0031320322002916)) [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCLNE31DA6PRKFYZme5pDmTAVuuf6BrJPrnpIF15ktVSp4?e=Oxe79T).
 
