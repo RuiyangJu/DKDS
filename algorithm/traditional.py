@@ -8,7 +8,8 @@ from skimage.filters import threshold_otsu, threshold_niblack, threshold_sauvola
 
 image_test_dir = './Testset/image/'
 mask_test_dir = './Testset/mask/'
-save_root_dir = './Traditional_Result'
+save_root_dir = './Traditional_Testing_E_Result'
+# save_root_dir = './Traditional_Testing_D_Result'
 os.makedirs(save_root_dir, exist_ok=True)
 
 window_size = 25
