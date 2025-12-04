@@ -99,7 +99,7 @@ Please revise the `/path/to/data` in `meta.yaml`.
 | GAN | 98.11 | 98.14 | 26.53dB | 0.82 | 80.49 |
 
 ### Train
-For **train** our model, please follow the instructions below:
+For train **our** model, please follow the instructions below:
 ```
   python ./Ours/image_to_512.py
   python ./Ours/gan_train.py
