@@ -68,6 +68,8 @@ The YOLO series of models are trained and evaluated using the following instruct
 ### Pretrained Models
 You can download our pretrained models [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/Er-w8GewvF1OhD1NK-3zqD4BhF15-o4Bc9txTcz-IetBBA?e=RkJFgK).
 Please revise the `/path/to/data` in `meta.yaml`.
+
+### ``Valid`` is Testing-E set.
 ```
   yolo val model=yolov8m.pt data=meta.yaml
   yolo val model=yolov9m.pt data=meta.yaml
