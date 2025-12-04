@@ -117,7 +117,8 @@ For testing **traditional** algorithms, please follow the instruction below:
 ```
 For testing **k-means + traditional** algorithms, please follow the instruction below:
 ```
-  python ./algorithm/kmeans_traditional.py
+  python ./algorithm/kmeans_traditional.py --image_test_dir ./Testset-E/image/ --mask_test_dir ./Testset-E/mask/ --save_root_dir ./Traditional_Testing_E_Result/
+  python ./algorithm/kmeans_traditional.py --image_test_dir ./Testset-D/image/ --mask_test_dir ./Testset-D/mask/ --save_root_dir ./Traditional_Testing_D_Result/
 ```
 For testing **our** method, please follow the instruction below:
 ```
