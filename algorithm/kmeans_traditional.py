@@ -3,13 +3,22 @@ import cv2
 import numpy as np
 import csv
 from tqdm import tqdm
+import argparse
 from Base.metrics import get_metric
-from sklearn.cluster import KMeans
 from skimage.filters import threshold_otsu, threshold_niblack, threshold_sauvola
 
-image_test_dir = './Testset/image/'
-mask_test_dir = './Testset/mask/'
-save_root_dir = './KMeans_Result'
+parser = argparse.ArgumentParser()
+
+parser.add_argument('--image_test_dir', type=str, default='./Testset/image/', help='Directory of test images')
+parser.add_argument('--mask_test_dir', type=str, default='./Testset/mask/', help='Directory of ground truth masks')
+parser.add_argument('--save_root_dir', type=str, default='./KMeans_Result', help='Directory to save results')
+
+args = parser.parse_args()
+
+image_test_dir = args.image_test_dir
+mask_test_dir = args.mask_test_dir
+save_root_dir = args.save_root_dir
+
 os.makedirs(save_root_dir, exist_ok=True)
 
 K = 3
