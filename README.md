@@ -79,7 +79,7 @@ Please revise the `/path/to/data` in `meta.yaml`.
   yolo val model='./Pretrained Models for Seal Detection/yolo11m.pt' data=meta.yaml
 ```
 
-### ``test`` is Testing-D set
+### ``Test`` is Testing-D set
 ```
   yolo val model='./Pretrained Models for Seal Detection/yolov8m.pt' data=meta.yaml split='test'
   yolo val model='./Pretrained Models for Seal Detection/yolov9m.pt' data=meta.yaml split='test'
