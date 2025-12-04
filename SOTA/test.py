@@ -39,7 +39,7 @@ batch_size = opt.batch_size
 
 # stage 2
 stage2_weight_folder = (
-    './Unet/stage2_dibco_'
+    './weights/Unet/stage2_dibco_'
     + base_model_name + '_'
     + str(int(lambda_bce)) + '_'
     + str(generator_lr) + '_'
@@ -91,7 +91,7 @@ models.append(model)
 
 # stage 3
 stage3_patch_weight_folder = (
-    './Unet/stage3_dibco_'
+    './weights/Unet/stage3_dibco_'
     + base_model_name + '_'
     + str(int(lambda_bce)) + '_'
     + str(generator_lr) + '/'
@@ -112,7 +112,7 @@ model_stage3_patch.eval()
 
 # stage 3 global model
 stage3_resize_weight_folder = (
-    './Unet/stage3_resize_dibco_'
+    './weights/Unet/stage3_resize_dibco_'
     + base_model_name + '_'
     + str(int(lambda_bce)) + '_'
     + str(generator_lr) + '/'
