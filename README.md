@@ -110,13 +110,13 @@ Please place ``GAN_efficientnet-b5_50_0.00002`` in the ``./weights/`` folder bef
   python ./Ours/gan_test.py
 ```
 
-### Evalute other SOTA methods
+### Test other SOTA methods
 #### Pretrained Models
 You can download the pretrained model of Suh *et al.* ([PR 2022](https://www.sciencedirect.com/science/article/abs/pii/S0031320322002916)) [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCLNE31DA6PRKFYZme5pDmTAVuuf6BrJPrnpIF15ktVSp4?e=Oxe79T).
 
 You can download the pretrained model of Ju *et al.* ([KBS 2024](https://www.sciencedirect.com/science/article/abs/pii/S0950705124011766)) here.
 
-#### Evaluate
+#### Test
 When evaluating Suh *et al.* method, please comment out line 153, when evaluating Ju *et al.* method, please comment out line 152.
 ```
   python ./SOTA/test.py --lambda_bce 50 --base_model_name efficientnet-b5 --batch_size 16
