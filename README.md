@@ -77,6 +77,14 @@ Please revise the `/path/to/data` in `meta.yaml`.
   yolo val model=yolo11m.pt data=meta.yaml
 ```
 
+### ``test`` is Testing-D set.
+```
+  yolo val model=yolov8m.pt data=meta.yaml val=dataset/test/images
+  yolo val model=yolov9m.pt data=meta.yaml val=dataset/test/images
+  yolo val model=yolov10m.pt data=meta.yaml val=dataset/test/images
+  yolo val model=yolo11m.pt data=meta.yaml val=dataset/test/images
+```
+
 ## Document Binarization
 ### Baseline Performance
 | Model | FM | p-FM | PSNR | DRD | Avg-Score |
