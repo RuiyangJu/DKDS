@@ -46,7 +46,7 @@ If you find our paper useful in your research, please consider citing:
 ```
 
 ## Text and Seal Detection
-### Baseline Performance for Testing-D set.
+### Baseline Performance for Testing-D set
 | Model     | Param.   | FLOPs    | AP<sub>50</sub><sup>Kuzushiji</sup> | AP<sub>50:95</sub><sup>Kuzushiji</sup> | AP<sub>50</sub><sup>Seal</sup> | AP<sub>50:95</sub><sup>Seal</sup> |
 | :--:      | :-:      | :-:      | :-:                                  | :-:                                    | :-:                             | :-:                                |
 | YOLOv8m   | 25.86M   | 79.1G    | 96.4%                                | 71.2%                                  | 99.1%                           | 86.2%                              |
@@ -87,7 +87,7 @@ Please revise the `/path/to/data` in `meta.yaml`.
 ```
 
 ## Document Binarization
-### Baseline Performance
+### Baseline Performance for Testing-D set
 | Model | FM | p-FM | PSNR | DRD | Avg-Score |
 | :--: | :-: | :-: | :-: | :-: | :-: |
 | Niblack | 39.13 | 41.14 | 8.44dB | 79.70 | 27.25 |
