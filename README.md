@@ -45,7 +45,7 @@ If you find our paper useful in your research, please consider citing:
   pip install -r requirements.txt
 ```
 
-## Text and Seal Detection
+## :one: Text and Seal Detection
 ### Baseline Performance for Testing-D set
 | Model     | Param.   | FLOPs    | AP<sub>50</sub><sup>Kuzushiji</sup> | AP<sub>50:95</sub><sup>Kuzushiji</sup> | AP<sub>50</sub><sup>Seal</sup> | AP<sub>50:95</sub><sup>Seal</sup> |
 | :--:      | :-:      | :-:      | :-:                                  | :-:                                    | :-:                             | :-:                                |
