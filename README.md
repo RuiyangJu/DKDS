@@ -47,7 +47,7 @@ If you find our paper useful in your research, please consider citing:
 
 ## :one: Track 1: Text and Seal Detection
 ### Baseline Performance for Testing-D set:
-| Model | Param. | FLOPs | P<sup>Kuzushiji</sup> | R<sup>Kuzushiji</sup> | F<sup>Kuzushiji</sup> | P<sup>Seal</sup> | R<sup>Seal</sup> | F<sup>Seal</sup> |
+| Model | Param. | FLOPs | P<sub>Kuzushiji</sub> | R<sub>Kuzushiji</sub> | F<sub>Kuzushiji</sub> | P<sub>Seal</sub> | R<sub>Seal</sub> | F<sub>Seal</sub> |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | YOLOv8m | 25.86M | 79.1G | 90.5% | 87.9% | 89.2% | 92.9% | 81.4% | 86.8% |
 | YOLOv9m | 20.16M | 77.5G | 94.0% | 87.1% | 90.4% | 88.4% | 81.4% | 84.8% |
