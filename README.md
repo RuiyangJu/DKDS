@@ -45,7 +45,7 @@ If you find our paper useful in your research, please consider citing:
   pip install -r requirements.txt
 ```
 
-## :one: Text and Seal Detection
+## :one: Track 1: Text and Seal Detection
 ### Baseline Performance for Testing-D set:
 | Model     | Param.   | FLOPs    | AP<sub>50</sub><sup>Kuzushiji</sup> | AP<sub>50:95</sub><sup>Kuzushiji</sup> | AP<sub>50</sub><sup>Seal</sup> | AP<sub>50:95</sub><sup>Seal</sup> |
 | :--:      | :-:      | :-:      | :-:                                  | :-:                                    | :-:                             | :-:                                |
@@ -86,7 +86,7 @@ Please revise the `/path/to/data` in `meta.yaml`.
   yolo val model='./Pretrained Models for Seal Detection/yolo11m.pt' data=meta.yaml split='test'
 ```
 
-## :two: Document Binarization
+## :two: Track 2: Document Binarization
 ### Baseline Performance for Testing-D set:
 | Model | FM | p-FM | PSNR | DRD | Avg-Score |
 | :--: | :-: | :-: | :-: | :-: | :-: |
