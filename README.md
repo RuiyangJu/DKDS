@@ -52,7 +52,7 @@ If you find our paper useful in your research, please consider citing:
 | YOLOv8m | 25.86M | 79.1G | 90.5% | 87.9% | 89.2% | 92.9% | 81.4% | 86.8% |
 | YOLOv9m | 20.16M | 77.5G | 94.0% | 87.1% | 90.4% | 88.4% | 81.4% | 84.8% |
 | YOLOv10m | 16.49M | 64.0G | 90.4% | 87.1% | 88.7% | 96.4% | 77.1% | 85.7% |
-| YOLOv11m | 20.05M | 68.2G | 94.7% | 89.1% | 91.8% | 98.5% | 84.3% | 90.8% |
+| YOLO11m | 20.05M | 68.2G | 94.7% | 89.1% | 91.8% | 98.5% | 84.3% | 90.8% |
 
 #### :round_pushpin:Train (YOLO):
 We conducted training and validation of YOLO models using the [Ultralytics](https://github.com/ultralytics/ultralytics) YOLO framework.
