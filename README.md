@@ -65,11 +65,11 @@ The YOLO series of models are trained and evaluated using the following instruct
   yolo detect train model=yolo11m.pt data=./meta.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolo11m
 ```
 
-### :round_pushpin:Pretrained Models:
+#### :round_pushpin:Pretrained Models:
 You can download our pretrained models [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/Er-w8GewvF1OhD1NK-3zqD4BhF15-o4Bc9txTcz-IetBBA?e=RkJFgK).
 Please revise the `/path/to/data` in `meta.yaml`.
 
-### :round_pushpin:Test (YOLO):
+#### :round_pushpin:Test (YOLO):
 * ``./valid`` is Testing-E set:
 ```
   yolo val model='./Pretrained Models for Seal Detection/yolov8m.pt' data=meta.yaml
