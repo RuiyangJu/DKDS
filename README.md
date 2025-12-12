@@ -90,13 +90,15 @@ Please revise the `/path/to/data` in `meta.yaml`.
 ### Baseline Performance for Testing-D set:
 | Model | FM | p-FM | PSNR | DRD | Avg-Score |
 | :--: | :-: | :-: | :-: | :-: | :-: |
-| Niblack | 39.13 | 41.14 | 8.44dB | 79.70 | 27.25 |
-| Otsu | 63.01 | 63.31 | 11.76dB | 37.69 | 50.10 |
-| Sauvola | 87.87 | 90.99 | 18.34dB | 7.01 | 72.55 |
-| K-means + Niblack | 39.99 | 42.03 | 8.61dB | 76.67 | 28.49 |
-| K-means + Otsu | 84.76 | 86.28 | 17.14dB | 9.90 | 69.57 |
-| K-means + Sauvola | 88.59 | 91.48 | 18.65dB | 6.37 | 73.09 |
-| GAN | 98.11 | 98.14 | 26.53dB | 0.82 | 80.49 |
+| Otsu | 60.51 | 60.80 | 11.39dB | 40.89 | 47.95 |
+| Niblack | 37.52 | 39.41 | 8.28dB | 82.29 | 25.73 |
+| Sauvola | 84.00 | 87.04 | 17.08dB | 9.60 | 69.63 |
+| K-means + Otsu | 68.10 | 69.04 | 13.37dB | 33.32 | 54.30 |
+| K-means + Niblack | 35.98 | 37.04 | 8.27dB | 82.66 | 24.66 |
+| K-means + Sauvola | 70.50 | 69.98 | 15.80dB | 14.69 | 60.40 |
+| Suh et al. (PR2022) | 91.95 | 91.96 | 20.10dB | 3.85 | 75.04 |
+| Ju et al. (KBS2024) | 94.86 | 94.90 | 22.11dB | 2.27 | 77.40 |
+| Improved cGAN (Ours) | 97.08 | 97.13 | 24.58dB | 1.38 | 79.35 |
 
 ### ① Traditional Algorithom:
 #### :round_pushpin:Test:
