@@ -98,7 +98,7 @@ Please revise the `/path/to/data` in `meta.yaml`.
 | K-means + Sauvola | 88.59 | 91.48 | 18.65dB | 6.37 | 73.09 |
 | GAN | 98.11 | 98.14 | 26.53dB | 0.82 | 80.49 |
 
-### Traditional Algorithom
+### ① Traditional Algorithom
 #### :round_pushpin:Test
 For testing **traditional** algorithms, please follow the instruction below:
 ```
@@ -110,26 +110,8 @@ For testing **k-means + traditional** algorithms, please follow the instruction 
   python ./algorithm/kmeans_traditional.py --image_test_dir ./Testset-E/image/ --mask_test_dir ./Testset-E/mask/ --save_root_dir ./KMeans_Testing_E_Result/
   python ./algorithm/kmeans_traditional.py --image_test_dir ./Testset-D/image/ --mask_test_dir ./Testset-D/mask/ --save_root_dir ./KMeans_Testing_D_Result/
 ```
-### Ours
-#### :round_pushpin:Train
-For training **our** model, please follow the instructions below:
-```
-  python ./Ours/image_to_512.py
-  python ./Ours/gan_train.py
-```
 
-#### :round_pushpin:Pretrained Models
-You can download pretrained our model [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/EvyWW4yx5e5OiqstmHWFXYMBe9z3Z3RwSB4bAMwcgkw_bg?e=3lGaP9).
-Please place ``GAN_efficientnet-b5_50_0.00002`` in the ``./weights/`` folder before running ``gan_test.py``.
-
-#### :round_pushpin:Test
-For testing **our** method, please follow the instruction below:
-```
-  python ./Ours/gan_test.py --image_test_dir ./Testset-E/image/ --mask_test_dir ./Testset-E/mask/ --save_root_dir ./Ours_Testing_E_Result/
-  python ./Ours/gan_test.py --image_test_dir ./Testset-D/image/ --mask_test_dir ./Testset-D/mask/ --save_root_dir ./Ours_Testing_D_Result/
-```
-
-### Other SOTA methods
+### ② Other SOTA methods
 #### :round_pushpin:Pretrained Models
 You can download the pretrained model of Suh *et al.* ([PR 2022](https://www.sciencedirect.com/science/article/abs/pii/S0031320322002916)) [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCLNE31DA6PRKFYZme5pDmTAVuuf6BrJPrnpIF15ktVSp4?e=Oxe79T).
 
@@ -147,6 +129,25 @@ Please place ``UnetPlusPlus`` in the ``./weights/`` folder before running ``./SO
 ```
   python ./SOTA/ju_test.py --lambda_bce 50 --base_model_name efficientnet-b5 --batch_size 16 --image_test_dir ./Testset-E/image/ --mask_test_dir ./Testset-E/mask/ --save_root_dir ./Ju_Testing_E_Result/
   python ./SOTA/ju_test.py --lambda_bce 50 --base_model_name efficientnet-b5 --batch_size 16 --image_test_dir ./Testset-D/image/ --mask_test_dir ./Testset-D/mask/ --save_root_dir ./Ju_Testing_D_Result/
+```
+
+### ③ Ours
+#### :round_pushpin:Train
+For training **our** model, please follow the instructions below:
+```
+  python ./Ours/image_to_512.py
+  python ./Ours/gan_train.py
+```
+
+#### :round_pushpin:Pretrained Models
+You can download pretrained our model [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/EvyWW4yx5e5OiqstmHWFXYMBe9z3Z3RwSB4bAMwcgkw_bg?e=3lGaP9).
+Please place ``GAN_efficientnet-b5_50_0.00002`` in the ``./weights/`` folder before running ``gan_test.py``.
+
+#### :round_pushpin:Test
+For testing **our** method, please follow the instruction below:
+```
+  python ./Ours/gan_test.py --image_test_dir ./Testset-E/image/ --mask_test_dir ./Testset-E/mask/ --save_root_dir ./Ours_Testing_E_Result/
+  python ./Ours/gan_test.py --image_test_dir ./Testset-D/image/ --mask_test_dir ./Testset-D/mask/ --save_root_dir ./Ours_Testing_D_Result/
 ```
 
 # License
