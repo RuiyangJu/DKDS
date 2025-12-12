@@ -47,12 +47,12 @@ If you find our paper useful in your research, please consider citing:
 
 ## :one: Track 1: Text and Seal Detection
 ### Baseline Performance for Testing-D set:
-| Model     | Param.   | FLOPs    | AP<sub>50</sub><sup>Kuzushiji</sup> | AP<sub>50:95</sub><sup>Kuzushiji</sup> | AP<sub>50</sub><sup>Seal</sup> | AP<sub>50:95</sub><sup>Seal</sup> |
-| :--:      | :-:      | :-:      | :-:                                  | :-:                                    | :-:                             | :-:                                |
-| YOLOv8m   | 25.86M   | 79.1G    | 96.4%                                | 71.2%                                  | 99.1%                           | 86.2%                              |
-| YOLOv9m   | 20.16M   | 77.5G    | 96.3%                                | 71.7%                                  | 97.2%                           | 81.4%                              |
-| YOLOv10m  | 16.49M   | 64.0G    | 96.2%                                | 71.4%                                  | 99.1%                           | 85.7%                              |
-| YOLOv11m  | 20.05M   | 68.2G    | 97.8%                                | 74.1%                                  | 98.5%                           | 85.7%                              |
+| Model | Param. | FLOPs | P<sup>Kuzushiji</sup> | R<sup>Kuzushiji</sup> | F<sup>Kuzushiji</sup> | P<sup>Seal</sup> | R<sup>Seal</sup> | F<sup>Seal</sup> |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| YOLOv8m | 25.86M | 79.1G | 90.5% | 87.9% | 89.2% | 92.9% | 81.4% | 86.8% |
+| YOLOv9m | 20.16M | 77.5G | 94.0% | 87.1% | 90.4% | 88.4% | 81.4% | 84.8% |
+| YOLOv10m | 16.49M | 64.0G | 90.4% | 87.1% | 88.7% | 96.4% | 77.1% | 85.7% |
+| YOLOv11m | 20.05M | 68.2G | 94.7% | 89.1% | 91.8% | 98.5% | 84.3% | 90.8% |
 
 #### :round_pushpin:Train (YOLO):
 We conducted training and validation of YOLO models using the [Ultralytics](https://github.com/ultralytics/ultralytics) YOLO framework.
