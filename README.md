@@ -133,7 +133,7 @@ For testing **our** method, please follow the instruction below:
 #### Pretrained Models
 You can download the pretrained model of Suh *et al.* ([PR 2022](https://www.sciencedirect.com/science/article/abs/pii/S0031320322002916)) [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCLNE31DA6PRKFYZme5pDmTAVuuf6BrJPrnpIF15ktVSp4?e=Oxe79T).
 
-You can download the pretrained model of Ju *et al.* ([KBS 2024](https://www.sciencedirect.com/science/article/abs/pii/S0950705124011766)) here.
+You can download the pretrained model of Ju *et al.* ([KBS 2024](https://www.sciencedirect.com/science/article/abs/pii/S0950705124011766)) [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgBJdVgrzi38S4Z6HzwNkJQ_Af1q51A3IbXJa51R5cc6Wn8).
 
 #### Test (Suh et al.)
 Please place ``Unet`` in the ``./weights/`` folder before running ``./SOTA/suh_test.py``.
