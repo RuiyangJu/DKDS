@@ -99,7 +99,7 @@ Please revise the `/path/to/data` in `meta.yaml`.
 | GAN | 98.11 | 98.14 | 26.53dB | 0.82 | 80.49 |
 
 ### Traditional Algorithom
-#### Test
+#### :round_pushpin:Test
 For testing **traditional** algorithms, please follow the instruction below:
 ```
   python ./algorithm/traditional.py --image_test_dir ./Testset-E/image/ --mask_test_dir ./Testset-E/mask/ --save_root_dir ./Traditional_Testing_E_Result/
@@ -111,18 +111,18 @@ For testing **k-means + traditional** algorithms, please follow the instruction 
   python ./algorithm/kmeans_traditional.py --image_test_dir ./Testset-D/image/ --mask_test_dir ./Testset-D/mask/ --save_root_dir ./KMeans_Testing_D_Result/
 ```
 ### Ours
-#### Train
+#### :round_pushpin:Train
 For training **our** model, please follow the instructions below:
 ```
   python ./Ours/image_to_512.py
   python ./Ours/gan_train.py
 ```
 
-#### Pretrained Models
+#### :round_pushpin:Pretrained Models
 You can download pretrained our model [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/EvyWW4yx5e5OiqstmHWFXYMBe9z3Z3RwSB4bAMwcgkw_bg?e=3lGaP9).
 Please place ``GAN_efficientnet-b5_50_0.00002`` in the ``./weights/`` folder before running ``gan_test.py``.
 
-#### Test
+#### :round_pushpin:Test
 For testing **our** method, please follow the instruction below:
 ```
   python ./Ours/gan_test.py --image_test_dir ./Testset-E/image/ --mask_test_dir ./Testset-E/mask/ --save_root_dir ./Ours_Testing_E_Result/
@@ -130,19 +130,19 @@ For testing **our** method, please follow the instruction below:
 ```
 
 ### Other SOTA methods
-#### Pretrained Models
+#### :round_pushpin:Pretrained Models
 You can download the pretrained model of Suh *et al.* ([PR 2022](https://www.sciencedirect.com/science/article/abs/pii/S0031320322002916)) [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCLNE31DA6PRKFYZme5pDmTAVuuf6BrJPrnpIF15ktVSp4?e=Oxe79T).
 
 You can download the pretrained model of Ju *et al.* ([KBS 2024](https://www.sciencedirect.com/science/article/abs/pii/S0950705124011766)) [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgBJdVgrzi38S4Z6HzwNkJQ_Af1q51A3IbXJa51R5cc6Wn8).
 
-#### Test (Suh et al.)
+#### :round_pushpin:Test (Suh et al.)
 Please place ``Unet`` in the ``./weights/`` folder before running ``./SOTA/suh_test.py``.
 ```
   python ./SOTA/suh_test.py --lambda_bce 50 --base_model_name efficientnet-b5 --batch_size 16 --image_test_dir ./Testset-E/image/ --mask_test_dir ./Testset-E/mask/ --save_root_dir ./Suh_Testing_E_Result/
   python ./SOTA/suh_test.py --lambda_bce 50 --base_model_name efficientnet-b5 --batch_size 16 --image_test_dir ./Testset-D/image/ --mask_test_dir ./Testset-D/mask/ --save_root_dir ./Suh_Testing_D_Result/
 ```
 
-#### Test (Ju et al.)
+#### :round_pushpin:Test (Ju et al.)
 Please place ``UnetPlusPlus`` in the ``./weights/`` folder before running ``./SOTA/ju_test.py``.
 ```
   python ./SOTA/ju_test.py --lambda_bce 50 --base_model_name efficientnet-b5 --batch_size 16 --image_test_dir ./Testset-E/image/ --mask_test_dir ./Testset-E/mask/ --save_root_dir ./Ju_Testing_E_Result/
