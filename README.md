@@ -70,7 +70,7 @@ The YOLO series of models are trained and evaluated using the following instruct
 You can download our pretrained models [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/Er-w8GewvF1OhD1NK-3zqD4BhF15-o4Bc9txTcz-IetBBA?e=RkJFgK).
 Please revise the `/path/to/data` in `meta.yaml`.
 
-#### :round_pushpin:``Valid`` is Testing-E set
+#### :round_pushpin:``./valid`` is Testing-E set
 ```
   yolo val model='./Pretrained Models for Seal Detection/yolov8m.pt' data=meta.yaml
   yolo val model='./Pretrained Models for Seal Detection/yolov9m.pt' data=meta.yaml
@@ -78,7 +78,7 @@ Please revise the `/path/to/data` in `meta.yaml`.
   yolo val model='./Pretrained Models for Seal Detection/yolo11m.pt' data=meta.yaml
 ```
 
-#### :round_pushpin:``Test`` is Testing-D set
+#### :round_pushpin:``./test`` is Testing-D set
 ```
   yolo val model='./Pretrained Models for Seal Detection/yolov8m.pt' data=meta.yaml split='test'
   yolo val model='./Pretrained Models for Seal Detection/yolov9m.pt' data=meta.yaml split='test'
