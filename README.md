@@ -86,6 +86,14 @@ Please revise the `/path/to/data` in `meta.yaml`.
   yolo val model='./Pretrained Models for Seal Detection/yolo11m.pt' data=meta.yaml split='test' name=test_d_yolo11m
 ```
 
+* ``./real`` is Testing-R set:
+```
+  yolo val model='./Pretrained Models for Seal Detection/yolov8m.pt' data=meta_real.yaml split='test' name=test_r_yolov8m
+  yolo val model='./Pretrained Models for Seal Detection/yolov9m.pt' data=meta_real.yaml split='test' name=test_r_yolov9m
+  yolo val model='./Pretrained Models for Seal Detection/yolov10m.pt' data=meta_real.yaml split='test' name=test_r_yolov10m
+  yolo val model='./Pretrained Models for Seal Detection/yolo11m.pt' data=meta_real.yaml split='test' name=test_r_yolo11m
+```
+
 ## :two: Track 2: Document Binarization
 ### Baseline Performance for Testing-D set:
 | Model | FM | p-FM | PSNR | DRD | Avg-Score |
