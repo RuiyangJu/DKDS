@@ -80,10 +80,10 @@ Please revise the `/path/to/data` in `meta.yaml`.
 
 * ``./test`` is Testing-D set:
 ```
-  yolo val model='./Pretrained Models for Seal Detection/yolov8m.pt' data=meta.yaml split='test'
-  yolo val model='./Pretrained Models for Seal Detection/yolov9m.pt' data=meta.yaml split='test'
-  yolo val model='./Pretrained Models for Seal Detection/yolov10m.pt' data=meta.yaml split='test'
-  yolo val model='./Pretrained Models for Seal Detection/yolo11m.pt' data=meta.yaml split='test'
+  yolo val model='./Pretrained Models for Seal Detection/yolov8m.pt' data=meta.yaml split='test' name=test_e_yolov8m
+  yolo val model='./Pretrained Models for Seal Detection/yolov9m.pt' data=meta.yaml split='test' name=test_e_yolov9m
+  yolo val model='./Pretrained Models for Seal Detection/yolov10m.pt' data=meta.yaml split='test' name=test_e_yolov10m
+  yolo val model='./Pretrained Models for Seal Detection/yolo11m.pt' data=meta.yaml split='test' name=test_e_yolo11m
 ```
 
 ## :two: Track 2: Document Binarization
