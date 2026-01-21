@@ -59,10 +59,10 @@ We conducted training and validation of YOLO models using the [Ultralytics](http
 
 The YOLO series of models are trained and evaluated using the following instructions:
 ```
-  yolo detect train model=yolov8m.pt data=./meta.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolov8m
-  yolo detect train model=yolov9m.pt data=./meta.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolov9m
-  yolo detect train model=yolov10m.pt data=./meta.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolov10m
-  yolo detect train model=yolo11m.pt data=./meta.yaml epochs=100 batch=16 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolo11m
+  yolo detect train model=yolov8m.pt data=./meta.yaml epochs=100 batch=32 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolov8m
+  yolo detect train model=yolov9m.pt data=./meta.yaml epochs=100 batch=32 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolov9m
+  yolo detect train model=yolov10m.pt data=./meta.yaml epochs=100 batch=32 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolov10m
+  yolo detect train model=yolo11m.pt data=./meta.yaml epochs=100 batch=32 imgsz=640 device=0 workers=8 optimizer=SGD lr0=0.01 name=train_yolo11m
 ```
 
 #### :round_pushpin:Pretrained Models (YOLO):
