@@ -72,18 +72,18 @@ Please revise the `/path/to/data` in `meta.yaml`.
 #### :round_pushpin:Test (YOLO):
 * ``./valid`` is Testing-E set:
 ```
-  yolo val model='./Pretrained Models for Seal Detection/yolov8m.pt' data=meta.yaml
-  yolo val model='./Pretrained Models for Seal Detection/yolov9m.pt' data=meta.yaml
-  yolo val model='./Pretrained Models for Seal Detection/yolov10m.pt' data=meta.yaml
-  yolo val model='./Pretrained Models for Seal Detection/yolo11m.pt' data=meta.yaml
+  yolo val model='./Pretrained Models for Seal Detection/yolov8m.pt' data=meta.yaml name=test_d_yolov8m
+  yolo val model='./Pretrained Models for Seal Detection/yolov9m.pt' data=meta.yaml name=test_d_yolov9m
+  yolo val model='./Pretrained Models for Seal Detection/yolov10m.pt' data=meta.yaml name=test_d_yolov10m
+  yolo val model='./Pretrained Models for Seal Detection/yolo11m.pt' data=meta.yaml name=test_d_yolo11m
 ```
 
 * ``./test`` is Testing-D set:
 ```
-  yolo val model='./Pretrained Models for Seal Detection/yolov8m.pt' data=meta.yaml split='test' name=test_e_yolov8m
-  yolo val model='./Pretrained Models for Seal Detection/yolov9m.pt' data=meta.yaml split='test' name=test_e_yolov9m
-  yolo val model='./Pretrained Models for Seal Detection/yolov10m.pt' data=meta.yaml split='test' name=test_e_yolov10m
-  yolo val model='./Pretrained Models for Seal Detection/yolo11m.pt' data=meta.yaml split='test' name=test_e_yolo11m
+  yolo val model='./Pretrained Models for Seal Detection/yolov8m.pt' data=meta.yaml split='test' name=test_d_yolov8m
+  yolo val model='./Pretrained Models for Seal Detection/yolov9m.pt' data=meta.yaml split='test' name=test_d_yolov9m
+  yolo val model='./Pretrained Models for Seal Detection/yolov10m.pt' data=meta.yaml split='test' name=test_d_yolov10m
+  yolo val model='./Pretrained Models for Seal Detection/yolo11m.pt' data=meta.yaml split='test' name=test_d_yolo11m
 ```
 
 ## :two: Track 2: Document Binarization
