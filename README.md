@@ -114,6 +114,7 @@ For testing **traditional** algorithms, please follow the instruction below:
 ```
   python ./algorithm/traditional.py --image_test_dir ./Testset-E/image/ --mask_test_dir ./Testset-E/mask/ --save_root_dir ./Traditional_Testing_E_Result/
   python ./algorithm/traditional.py --image_test_dir ./Testset-D/image/ --mask_test_dir ./Testset-D/mask/ --save_root_dir ./Traditional_Testing_D_Result/
+  python ./algorithm/traditional.py --image_test_dir ./Testset-R/image/ --mask_test_dir ./Testset-R/mask/ --save_root_dir ./Traditional_Testing_R_Result/
 ```
 For testing **k-means + traditional** algorithms, please follow the instruction below:
 ```
