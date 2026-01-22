@@ -120,6 +120,7 @@ For testing **k-means + traditional** algorithms, please follow the instruction 
 ```
   python ./algorithm/kmeans_traditional.py --image_test_dir ./Testset-E/image/ --mask_test_dir ./Testset-E/mask/ --save_root_dir ./KMeans_Testing_E_Result/
   python ./algorithm/kmeans_traditional.py --image_test_dir ./Testset-D/image/ --mask_test_dir ./Testset-D/mask/ --save_root_dir ./KMeans_Testing_D_Result/
+  python ./algorithm/kmeans_traditional.py --image_test_dir ./Testset-R/image/ --mask_test_dir ./Testset-R/mask/ --save_root_dir ./KMeans_Testing_R_Result/
 ```
 
 ### ② Other SOTA methods:
