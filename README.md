@@ -134,6 +134,7 @@ Please place ``Unet`` in the ``./weights/`` folder before running ``./SOTA/suh_t
 ```
   python ./SOTA/suh_test.py --lambda_bce 50 --base_model_name efficientnet-b5 --batch_size 16 --image_test_dir ./Testset-E/image/ --mask_test_dir ./Testset-E/mask/ --save_root_dir ./Suh_Testing_E_Result/
   python ./SOTA/suh_test.py --lambda_bce 50 --base_model_name efficientnet-b5 --batch_size 16 --image_test_dir ./Testset-D/image/ --mask_test_dir ./Testset-D/mask/ --save_root_dir ./Suh_Testing_D_Result/
+  python ./SOTA/suh_test.py --lambda_bce 50 --base_model_name efficientnet-b5 --batch_size 16 --image_test_dir ./Testset-R/image/ --mask_test_dir ./Testset-R/mask/ --save_root_dir ./Suh_Testing_R_Result/
 ```
 
 #### :round_pushpin:Test (Ju et al.):
