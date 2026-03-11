@@ -111,6 +111,19 @@ Please revise the `/path/to/data` in `meta.yaml`.
 ```
 
 ## :two: Track 2: Document Binarization
+### Baseline Performance for Testing-E set:
+| Model | FM | p-FM | PSNR | DRD | Avg-Score |
+| :--: | :-: | :-: | :-: | :-: | :-: |
+| Otsu | 63.01 | 63.31 | 11.76dB | 37.69 | 50.10 |
+| Niblack | 39.13 | 41.14 | 8.44dB | 79.70 | 27.25 |
+| Sauvola | 87.87 | 90.99 | 18.34dB | 7.01 | 72.55 |
+| K-means + Otsu | 84.76 | 86.28 | 17.14dB | 9.90 | 69.57 |
+| K-means + Niblack | 39.99 | 42.03 | 8.61dB | 76.67 | 28.49 |
+| K-means + Sauvola | 88.59 | 91.48 | 18.65dB | 6.37 | 73.09 |
+| Suh et al. (PR2022) | 93.09 | 93.09 | 20.99dB | 3.12 | 76.01 |
+| Ju et al. (KBS2024) | 95.80 | 95.81 | 23.14dB | 1.76 | 78.25 |
+| Improved cGAN (Ours) | 98.11 | 98.14 | 26.53dB | 0.82 | 80.49 |
+
 ### Baseline Performance for Testing-D set:
 | Model | FM | p-FM | PSNR | DRD | Avg-Score |
 | :--: | :-: | :-: | :-: | :-: | :-: |
@@ -123,6 +136,19 @@ Please revise the `/path/to/data` in `meta.yaml`.
 | Suh et al. (PR2022) | 91.95 | 91.96 | 20.10dB | 3.85 | 75.04 |
 | Ju et al. (KBS2024) | 94.86 | 94.90 | 22.11dB | 2.27 | 77.40 |
 | Improved cGAN (Ours) | 97.08 | 97.13 | 24.58dB | 1.38 | 79.35 |
+
+### Baseline Performance for Testing-R set:
+| Model | FM | p-FM | PSNR | DRD | Avg-Score |
+| :--: | :-: | :-: | :-: | :-: | :-: |
+| Otsu | 67.85 | 69.36 | 13.05dB | 52.82 | 49.36 |
+| Niblack | 39.67 | 42.01 | 8.31dB | 81.81 | 27.04 |
+| Sauvola | 73.69 | 76.14 | 14.30dB | 32.84 | 57.82 |
+| K-means + Otsu | 48.92 | 49.39 | 8.60dB | 77.09 | 32.46 |
+| K-means + Niblack | 33.68 | 34.43 | 8.16dB | 83.82 | 23.11 |
+| K-means + Sauvola | 53.00 | 52.80 | 12.98dB | 25.54 | 48.31 |
+| Suh et al. (PR2022) | 81.00 | 81.53 | 16.26dB | 16.10 | 65.67 |
+| Ju et al. (KBS2024) | 77.37 | 77.55 | 15.47dB | 30.55 | 59.96 |
+| Improved cGAN (Ours) | 73.33 | 72.98 | 15.74dB | 31.44 | 57.65 |
 
 ### ① Traditional Algorithom:
 #### :round_pushpin:Test:
