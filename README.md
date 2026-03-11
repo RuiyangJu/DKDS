@@ -46,13 +46,29 @@ If you find our paper useful in your research, please consider citing:
 ```
 
 ## :one: Track 1: Kuzushiji Character and Seal Detection
+### Baseline Performance for Testing-E set:
+| Model | Param. | FLOPs | P<sub>Kuzushiji</sub> | R<sub>Kuzushiji</sub> | F<sub>Kuzushiji</sub> | P<sub>Seal</sub> | R<sub>Seal</sub> | F<sub>Seal</sub> |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| YOLOv8m | 25.84M | 78.7G | 96.0% | 89.2% | 92.5% | 95.5% | 96.4% | 95.9% |
+| YOLOv9m | 20.01M | 76.5G | 96.6% | 89.6% | 93.0% | 99.8% | 96.4% | 98.1% |
+| YOLOv10m | 15.31M | 58.9G | 94.1% | 89.6% | 91.8% | 99.6% | 96.4% | 98.0% |
+| YOLO11m | 20.03M | 67.7G | 97.7% | 92.0% | 94.8% | 97.0% | 92.9% | 94.9% |
+
 ### Baseline Performance for Testing-D set:
 | Model | Param. | FLOPs | P<sub>Kuzushiji</sub> | R<sub>Kuzushiji</sub> | F<sub>Kuzushiji</sub> | P<sub>Seal</sub> | R<sub>Seal</sub> | F<sub>Seal</sub> |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| YOLOv8m | 25.86M | 79.1G | 90.5% | 87.9% | 89.2% | 92.9% | 81.4% | 86.8% |
-| YOLOv9m | 20.16M | 77.5G | 94.0% | 87.1% | 90.4% | 88.4% | 81.4% | 84.8% |
-| YOLOv10m | 16.49M | 64.0G | 90.4% | 87.1% | 88.7% | 96.4% | 77.1% | 85.7% |
-| YOLO11m | 20.05M | 68.2G | 94.7% | 89.1% | 91.8% | 98.5% | 84.3% | 90.8% |
+| YOLOv8m | 25.84M | 78.7G | 91.2% | 87.7% | 89.4% | 92.9% | 81.4% | 86.8% |
+| YOLOv9m | 20.01M | 76.5G | 94.7% | 86.8% | 90.6% | 88.4% | 81.5% | 84.8% |
+| YOLOv10m | 15.31M | 58.9G | 90.9% | 86.7% | 88.8% | 96.4% | 77.1% | 85.7% |
+| YOLO11m | 20.03M | 67.7G | 95.3% | 88.7% | 91.9% | 98.4% | 84.3% | 90.8% |
+
+### Baseline Performance for Testing-R set:
+| Model | Param. | FLOPs | P<sub>Kuzushiji</sub> | R<sub>Kuzushiji</sub> | F<sub>Kuzushiji</sub> | P<sub>Seal</sub> | R<sub>Seal</sub> | F<sub>Seal</sub> |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| YOLOv8m | 25.84M | 78.7G | 84.1% | 83.3% | 83.7% | 75.8% | 85.7% | 80.4% |
+| YOLOv9m | 20.01M | 76.5G | 91.6% | 82.1% | 86.6% | 75.5% | 77.3% | 76.4% |
+| YOLOv10m | 15.31M | 58.9G | 86.3% | 79.5% | 82.8% | 65.2% | 77.3% | 70.7% |
+| YOLO11m | 20.03M | 67.7G | 85.4% | 85.3% | 85.3% | 72.3% | 83.0% | 77.3% |
 
 #### :round_pushpin:Train (YOLO):
 We conducted training and validation of YOLO models using the [Ultralytics](https://github.com/ultralytics/ultralytics) YOLO framework.
