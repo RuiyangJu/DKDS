@@ -45,7 +45,7 @@ If you find our paper useful in your research, please consider citing:
   pip install -r requirements.txt
 ```
 
-## :one: Track 1: Text and Seal Detection
+## :one: Track 1: Kuzushiji Character and Seal Detection
 ### Baseline Performance for Testing-D set:
 | Model | Param. | FLOPs | P<sub>Kuzushiji</sub> | R<sub>Kuzushiji</sub> | F<sub>Kuzushiji</sub> | P<sub>Seal</sub> | R<sub>Seal</sub> | F<sub>Seal</sub> |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
