@@ -1,7 +1,6 @@
 # Degraded Kuzushiji Documents with Seals (DKDS)
 
 >[arXiv](https://arxiv.org/abs/2511.09117)
-
 >[Project](https://ruiyangju.github.io/DKDS)
 
 >Accepted by **IJDAR 2026**
